@@ -1,0 +1,2410 @@
+<body data-aos-easing="ease-in-out-quad" data-aos-duration="600" data-aos-delay="0"><!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5PHGGZG"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="clearfix">
+    <a href="/" class="logo">
+        <img src="/static/web/img/logo.png?_m=1597301782" alt="NCS">
+    </a>
+    <a class="menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </a>
+    <nav>
+        <ul>
+                            <li>
+                    <a class="panel-btn" data-panel="#login">
+                        <img src="/static/web/img/svg/sign-in.svg?_m=1597828013" alt="Log In">
+                        <p>Log In</p>
+                    </a>
+                </li>
+            
+            <li>
+                <a href="/" class="active">
+                    <img src="/static/web/img/svg/music-alt.svg?_m=1597828013" alt="Music Library">
+                    <p>Music Library</p>
+                </a>
+            </li>
+            <li>
+                <a href="/artists">
+                    <img src="/static/web/img/svg/user-friends.svg?_m=1597828013" alt="Artists">
+                    <p>Artists</p>
+                </a>
+            </li>
+            
+
+            
+        </ul>
+        <ul>
+            <li>
+                <a href="/usage-policy">
+                    <img src="/static/web/img/svg/file-alt.svg?_m=1597828013" alt="Usage Policy">
+                    <p>Usage Policy</p>
+                </a>
+            </li>
+            <li>
+                <a href="/about">
+                    <img src="/static/web/img/svg/info-circle.svg?_m=1597828013" alt="About">
+                    <p>About</p>
+                </a>
+            </li>
+            <li>
+                <a href="/contact">
+                    <img src="/static/web/img/svg/file-user.svg?_m=1597828013" alt="Contact">
+                    <p>Contact</p>
+                </a>
+            </li>
+
+                                        <li style="margin-top:7vh;"><a href="https://ncs.lnk.to/SpotfiyPlaylistWE" target="_blank"> <img src="https://ncsmusic.s3.eu-west-1.amazonaws.com/social-links/000/000/001/1691764744_1qszULdYbm_spotify.svg" class="social" alt="Spotify"> <p>Spotify</p></a></li>
+                                                                    <li><a href="https://www.instagram.com/nocopyrightsounds/" target="_blank"> <img src="https://ncsmusic.s3.eu-west-1.amazonaws.com/social-links/000/000/004/1691765545_zUsDyv3fjp_instagram.svg" class="social" alt="Instagram"> <p>Instagram</p></a></li>
+                                            <li><a href="https://www.youtube.com/nocopyrightsounds" target="_blank"> <img src="https://ncsmusic.s3.eu-west-1.amazonaws.com/social-links/000/000/005/1691765587_3jQGCufgfS_youtube.svg" class="social" alt="YouTube"> <p>YouTube</p></a></li>
+                                                
+        </ul>
+        <div class="logo-id" style="opacity:0.3">
+            <a href="https://www.netdreams.co.uk/" target="_blank" class="id-text">Web Agency</a>
+        </div>
+    </nav>
+</header>
+<div class="panel" id="login">
+    <div class="inner">
+    <h3>Log In <a class="panel-close"><i class="far fa-times-circle"></i></a></h3>
+    <hr>
+        <a style="margin-bottom: 6px" href="/facebook/auth/login" class="btn fb white-btn"><i class="facebook "></i> Log in with Facebook</a>
+        <a style="margin-bottom: 6px" href="/google/auth/login" class="btn fb white-btn"><i class="google"></i> Log in with Google</a>
+        <a href="/spotify/auth/login" class="btn fb white-btn"><i class="spotify"></i> Log in with Spotify</a>
+        <hr>
+    <form class="clearfix" method="post" action="/log-in">
+    <div class="clearfix">
+
+    
+    <fieldset>
+    <label>Email</label>
+    <input type="email" name="email">
+    </fieldset>
+    <fieldset>
+    <label>Password</label>
+    <input type="password" name="password">
+    </fieldset>
+    </div>
+    <a class="forgot panel-btn" data-panel="#forgot">Forgot Password?</a>
+    &nbsp;&nbsp;&nbsp;
+    <a class="forgot panel-btn" data-panel="#signup">Sign Up</a>
+    <input type="submit" value="Log In" class="btn black-full">
+    <input type="hidden" name="_token" value="hYuL1xlBxcx6EeMaiMw1aX17QPWFochils57H9ev">    </form>
+    </div>
+    </div>
+
+    <div class="panel" id="forgot">
+    <div class="inner">
+    <h3>Forgot Password <a class="panel-close"><i class="far fa-times-circle"></i></a></h3>
+    <hr>
+    <form class="clearfix" method="post" action="/forgot-password">
+    <div class="clearfix">
+
+    
+    <fieldset style="margin-bottom: 20px">
+    <p>Enter your email address below. If an account exists, we will email you password reset instructions.</p>
+    </fieldset>
+    <fieldset>
+    <label>Email Address</label>
+    <input name="email" type="email" value="" required="">
+    </fieldset>
+    </div>
+    <input type="submit" value="Submit" class="btn black-full">
+    <input type="hidden" name="_token" value="hYuL1xlBxcx6EeMaiMw1aX17QPWFochils57H9ev">    </form>
+    </div>
+    </div>
+
+    <div class="panel" id="forgot-reset">
+    <div class="inner">
+    <h3>Reset Password <a class="panel-close"><i class="far fa-times-circle"></i></a></h3>
+    <hr>
+    <form class="clearfix" method="post" action="/forgot-password/reset">
+    <div class="clearfix">
+
+    
+    <fieldset style="margin-bottom: 20px">
+    <p>Please enter and confirm your new password below. Passwords need to be at least 6 characters long.</p>
+    </fieldset>
+    <fieldset>
+    <label>New Password</label>
+    <input name="password" type="password" required="">
+    </fieldset>
+    <fieldset>
+    <label>Confirm New Password</label>
+    <input name="password_confirmation" type="password" required="">
+    </fieldset>
+    </div>
+    <input type="submit" value="Submit" class="btn black-full">
+    <input type="hidden" name="token" value="">
+    <input type="hidden" name="_token" value="hYuL1xlBxcx6EeMaiMw1aX17QPWFochils57H9ev">    </form>
+    </div>
+    </div>
+
+    <div class="panel" id="signup">
+<div class="inner">
+<h3>Sign Up <a class="panel-close"><i class="far fa-times-circle"></i></a></h3>
+<hr>
+
+    <a href="/facebook/auth/register" class="btn fb white-btn" style="margin-bottom: 6px"><i class="facebook"></i> Sign up with Facebook</a>
+    <a href="/google/auth/register" class="btn fb white-btn" style="margin-bottom: 6px"><i class="google"></i> Sign up with Google</a>
+    <a href="/spotify/auth/register" class="btn fb white-btn"><i class="spotify"></i> Sign up with Spotify</a>
+
+<hr>
+<form class="clearfix" method="post" action="#">
+<div class="clearfix">
+
+
+</div>
+<p>By signing up, you agree to the <a href="/usage-policy/terms" style="color:inherit;text-decoration:underline;" target="_blank">terms &amp; conditions</a> and <a href="/privacy" style="color:inherit;text-decoration:underline;" target="_blank">privacy policy</a> of this website.</p>
+<p>Already a member? Please <a class="forgot panel-btn" style="color:inherit;text-decoration:underline;" data-panel="#login">log in</a>.</p>
+</form>
+</div>
+</div>
+
+
+<div class="panel" id="download"></div>
+
+<main>
+<div class="container-fluid as-module">
+<div class="row">
+<div class="col-12">
+<div class="info-black">
+
+
+<h4>Copyright free music for creators.</h4>
+<p><span style="font-weight: 400;">We work with artists representing all genres of electronic music, generating over </span><strong>500 billion plays globally</strong><span style="font-weight: 400;">. Whether you are MrBeast or just starting to create content, our music will always be </span><strong>free to use</strong><span style="font-weight: 400;">, allowing you to monetise </span><strong>without fear of copyright strikes</strong><span style="font-weight: 400;">.&nbsp;</span></p>
+
+    <a href="/usage-policy" class="btn white">Usage Policy</a>
+
+
+</div>
+</div>
+</div>
+</div>
+<article class="module filters">
+<div id="music-search-form-sticky-wrapper" class="sticky-wrapper" style="height: 72px;"><form class="styled sticky" id="music-search-form" data-spacing="0" method="post" action="/music-search-proxy" style="width: 921.2px;">
+<div class="container-fluid">
+<div class="row">
+<div class="col-lg-3">
+<fieldset>
+<input class="submit-on-enter" type="text" placeholder="Search Tracks &amp; Artists" name="q" value="">
+<i class="far fa-search icon"></i>
+</fieldset>
+</div>
+<div class="col-lg-3">
+<fieldset>
+<div class="choices" data-type="select-one" role="combobox" tabindex="0" aria-autocomplete="list" aria-haspopup="true" aria-expanded="false" dir="ltr">
+      <div class="choices__inner"><select class="js-choice icon tag choices__input is-hidden" name="genre" onchange="$('#music-search-form').submit();" tabindex="-1" aria-hidden="true" data-choice="active"><option value="" selected="">Search Genres</option></select><div class="choices__list choices__list--single"><div class="choices__item choices__item--selectable" data-item="" data-id="1" data-value="" aria-selected="true">
+        Search Genres
+      </div></div></div><div class="choices__list choices__list--dropdown" aria-expanded="false"><input type="text" class="choices__input choices__input--cloned" autocomplete="off" autocapitalize="off" spellcheck="false" role="textbox" aria-autocomplete="list" aria-label="false" placeholder="Search...">
+      <div class="choices__list" dir="ltr" role="listbox"><div class="choices__item choices__item--choice choices__item--selectable is-highlighted" data-select-text="" data-choice="" data-id="1" data-value="" data-choice-selectable="" id="choices--genre-ws-item-choice-1" role="option" aria-selected="true">
+        Search Genres
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="2" data-value="31" data-choice-selectable="" id="choices--genre-ws-item-choice-2" role="option">
+        Alternative Dance
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="3" data-value="33" data-choice-selectable="" id="choices--genre-ws-item-choice-3" role="option">
+        Alternative Pop
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="4" data-value="23" data-choice-selectable="" id="choices--genre-ws-item-choice-4" role="option">
+        Ambient
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="5" data-value="34" data-choice-selectable="" id="choices--genre-ws-item-choice-5" role="option">
+        Anti-Pop
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="6" data-value="1" data-choice-selectable="" id="choices--genre-ws-item-choice-6" role="option">
+        Bass
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="7" data-value="18" data-choice-selectable="" id="choices--genre-ws-item-choice-7" role="option">
+        Bass House
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="8" data-value="26" data-choice-selectable="" id="choices--genre-ws-item-choice-8" role="option">
+        Brazilian Phonk
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="9" data-value="27" data-choice-selectable="" id="choices--genre-ws-item-choice-9" role="option">
+        Breakbeat
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="10" data-value="2" data-choice-selectable="" id="choices--genre-ws-item-choice-10" role="option">
+        Chill
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="11" data-value="35" data-choice-selectable="" id="choices--genre-ws-item-choice-11" role="option">
+        Chill Pop
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="12" data-value="85" data-choice-selectable="" id="choices--genre-ws-item-choice-12" role="option">
+        Colour Bass
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="13" data-value="65" data-choice-selectable="" id="choices--genre-ws-item-choice-13" role="option">
+        Complextro
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="14" data-value="36" data-choice-selectable="" id="choices--genre-ws-item-choice-14" role="option">
+        Dance-Pop
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="15" data-value="66" data-choice-selectable="" id="choices--genre-ws-item-choice-15" role="option">
+        Deep House
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="16" data-value="45" data-choice-selectable="" id="choices--genre-ws-item-choice-16" role="option">
+        Disco
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="17" data-value="46" data-choice-selectable="" id="choices--genre-ws-item-choice-17" role="option">
+        Disco House
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="18" data-value="3" data-choice-selectable="" id="choices--genre-ws-item-choice-18" role="option">
+        Drum &amp; Bass
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="19" data-value="4" data-choice-selectable="" id="choices--genre-ws-item-choice-19" role="option">
+        Drumstep
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="20" data-value="5" data-choice-selectable="" id="choices--genre-ws-item-choice-20" role="option">
+        Dubstep
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="21" data-value="6" data-choice-selectable="" id="choices--genre-ws-item-choice-21" role="option">
+        EDM
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="22" data-value="47" data-choice-selectable="" id="choices--genre-ws-item-choice-22" role="option">
+        Electro
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="23" data-value="48" data-choice-selectable="" id="choices--genre-ws-item-choice-23" role="option">
+        Electro House
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="24" data-value="7" data-choice-selectable="" id="choices--genre-ws-item-choice-24" role="option">
+        Electronic
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="25" data-value="39" data-choice-selectable="" id="choices--genre-ws-item-choice-25" role="option">
+        Electronic Pop
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="26" data-value="83" data-choice-selectable="" id="choices--genre-ws-item-choice-26" role="option">
+        Electronic Rock
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="27" data-value="17" data-choice-selectable="" id="choices--genre-ws-item-choice-27" role="option">
+        Future Bass
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="28" data-value="68" data-choice-selectable="" id="choices--genre-ws-item-choice-28" role="option">
+        Future Bounce
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="29" data-value="8" data-choice-selectable="" id="choices--genre-ws-item-choice-29" role="option">
+        Future House
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="30" data-value="69" data-choice-selectable="" id="choices--genre-ws-item-choice-30" role="option">
+        Future Rave
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="31" data-value="57" data-choice-selectable="" id="choices--genre-ws-item-choice-31" role="option">
+        Future Trap
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="32" data-value="40" data-choice-selectable="" id="choices--genre-ws-item-choice-32" role="option">
+        Futurepop
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="33" data-value="51" data-choice-selectable="" id="choices--genre-ws-item-choice-33" role="option">
+        Garage
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="34" data-value="15" data-choice-selectable="" id="choices--genre-ws-item-choice-34" role="option">
+        Glitch Hop
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="35" data-value="82" data-choice-selectable="" id="choices--genre-ws-item-choice-35" role="option">
+        Hardcore
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="36" data-value="9" data-choice-selectable="" id="choices--genre-ws-item-choice-36" role="option">
+        Hardstyle
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="37" data-value="10" data-choice-selectable="" id="choices--genre-ws-item-choice-37" role="option">
+        House
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="38" data-value="41" data-choice-selectable="" id="choices--genre-ws-item-choice-38" role="option">
+        Hyperpop
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="39" data-value="11" data-choice-selectable="" id="choices--genre-ws-item-choice-39" role="option">
+        Indie Dance
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="40" data-value="84" data-choice-selectable="" id="choices--genre-ws-item-choice-40" role="option">
+        Jersey Club
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="41" data-value="28" data-choice-selectable="" id="choices--genre-ws-item-choice-41" role="option">
+        Jump-Up
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="42" data-value="29" data-choice-selectable="" id="choices--genre-ws-item-choice-42" role="option">
+        Liquid DnB
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="43" data-value="60" data-choice-selectable="" id="choices--genre-ws-item-choice-43" role="option">
+        Lofi Hip-Hop
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="44" data-value="12" data-choice-selectable="" id="choices--genre-ws-item-choice-44" role="option">
+        Melodic Dubstep
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="45" data-value="54" data-choice-selectable="" id="choices--genre-ws-item-choice-45" role="option">
+        Melodic House
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="46" data-value="22" data-choice-selectable="" id="choices--genre-ws-item-choice-46" role="option">
+        Midtempo Bass
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="47" data-value="30" data-choice-selectable="" id="choices--genre-ws-item-choice-47" role="option">
+        Neurofunk
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="48" data-value="87" data-choice-selectable="" id="choices--genre-ws-item-choice-48" role="option">
+        Nu-Jazz
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="49" data-value="16" data-choice-selectable="" id="choices--genre-ws-item-choice-49" role="option">
+        Phonk
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="50" data-value="86" data-choice-selectable="" id="choices--genre-ws-item-choice-50" role="option">
+        Pluggnb
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="51" data-value="19" data-choice-selectable="" id="choices--genre-ws-item-choice-51" role="option">
+        Pop
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="52" data-value="55" data-choice-selectable="" id="choices--genre-ws-item-choice-52" role="option">
+        Progressive House
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="53" data-value="88" data-choice-selectable="" id="choices--genre-ws-item-choice-53" role="option">
+        RnB
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="54" data-value="89" data-choice-selectable="" id="choices--genre-ws-item-choice-54" role="option">
+        Speed Garage
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="55" data-value="73" data-choice-selectable="" id="choices--genre-ws-item-choice-55" role="option">
+        Tech House
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="56" data-value="80" data-choice-selectable="" id="choices--genre-ws-item-choice-56" role="option">
+        Techno
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="57" data-value="81" data-choice-selectable="" id="choices--genre-ws-item-choice-57" role="option">
+        Trance
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="58" data-value="14" data-choice-selectable="" id="choices--genre-ws-item-choice-58" role="option">
+        Trap
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="59" data-value="74" data-choice-selectable="" id="choices--genre-ws-item-choice-59" role="option">
+        Tribal House
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="60" data-value="21" data-choice-selectable="" id="choices--genre-ws-item-choice-60" role="option">
+        UKG
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="61" data-value="90" data-choice-selectable="" id="choices--genre-ws-item-choice-61" role="option">
+        Witch House
+      </div></div></div></div>
+</fieldset>
+</div>
+<div class="col-lg-3">
+<fieldset>
+<div class="choices" data-type="select-one" role="combobox" tabindex="0" aria-autocomplete="list" aria-haspopup="true" aria-expanded="false" dir="ltr">
+      <div class="choices__inner"><select class="js-choice icon tag choices__input is-hidden" name="mood" onchange="$('#music-search-form').submit();" tabindex="-1" aria-hidden="true" data-choice="active"><option value="" selected="">Search Moods</option></select><div class="choices__list choices__list--single"><div class="choices__item choices__item--selectable" data-item="" data-id="1" data-value="" aria-selected="true">
+        Search Moods
+      </div></div></div><div class="choices__list choices__list--dropdown" aria-expanded="false"><input type="text" class="choices__input choices__input--cloned" autocomplete="off" autocapitalize="off" spellcheck="false" role="textbox" aria-autocomplete="list" aria-label="false" placeholder="Search...">
+      <div class="choices__list" dir="ltr" role="listbox"><div class="choices__item choices__item--choice choices__item--selectable is-highlighted" data-select-text="" data-choice="" data-id="1" data-value="" data-choice-selectable="" id="choices--mood-l7-item-choice-1" role="option" aria-selected="true">
+        Search Moods
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="2" data-value="1" data-choice-selectable="" id="choices--mood-l7-item-choice-2" role="option">
+        Angry
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="3" data-value="33" data-choice-selectable="" id="choices--mood-l7-item-choice-3" role="option">
+        angry
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="4" data-value="26" data-choice-selectable="" id="choices--mood-l7-item-choice-4" role="option">
+        Chasing
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="5" data-value="2" data-choice-selectable="" id="choices--mood-l7-item-choice-5" role="option">
+        Dark
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="6" data-value="35" data-choice-selectable="" id="choices--mood-l7-item-choice-6" role="option">
+        dark
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="7" data-value="36" data-choice-selectable="" id="choices--mood-l7-item-choice-7" role="option">
+        dramatic
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="8" data-value="3" data-choice-selectable="" id="choices--mood-l7-item-choice-8" role="option">
+        Dreamy
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="9" data-value="27" data-choice-selectable="" id="choices--mood-l7-item-choice-9" role="option">
+        Eccentric
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="10" data-value="28" data-choice-selectable="" id="choices--mood-l7-item-choice-10" role="option">
+        Elegant
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="11" data-value="6" data-choice-selectable="" id="choices--mood-l7-item-choice-11" role="option">
+        energetic
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="12" data-value="4" data-choice-selectable="" id="choices--mood-l7-item-choice-12" role="option">
+        Epic
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="13" data-value="5" data-choice-selectable="" id="choices--mood-l7-item-choice-13" role="option">
+        Euphoric
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="14" data-value="37" data-choice-selectable="" id="choices--mood-l7-item-choice-14" role="option">
+        exciting
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="15" data-value="7" data-choice-selectable="" id="choices--mood-l7-item-choice-15" role="option">
+        Fear
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="16" data-value="29" data-choice-selectable="" id="choices--mood-l7-item-choice-16" role="option">
+        Floating
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="17" data-value="8" data-choice-selectable="" id="choices--mood-l7-item-choice-17" role="option">
+        Funny
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="18" data-value="9" data-choice-selectable="" id="choices--mood-l7-item-choice-18" role="option">
+        Glamorous
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="19" data-value="10" data-choice-selectable="" id="choices--mood-l7-item-choice-19" role="option">
+        Gloomy
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="20" data-value="11" data-choice-selectable="" id="choices--mood-l7-item-choice-20" role="option">
+        Happy
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="21" data-value="30" data-choice-selectable="" id="choices--mood-l7-item-choice-21" role="option">
+        Heavy
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="22" data-value="12" data-choice-selectable="" id="choices--mood-l7-item-choice-22" role="option">
+        Hopeful
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="23" data-value="13" data-choice-selectable="" id="choices--mood-l7-item-choice-23" role="option">
+        Laid Back
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="24" data-value="38" data-choice-selectable="" id="choices--mood-l7-item-choice-24" role="option">
+        majestic
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="25" data-value="14" data-choice-selectable="" id="choices--mood-l7-item-choice-25" role="option">
+        Mysterious
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="26" data-value="34" data-choice-selectable="" id="choices--mood-l7-item-choice-26" role="option">
+        negative
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="27" data-value="39" data-choice-selectable="" id="choices--mood-l7-item-choice-27" role="option">
+        neutral
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="28" data-value="15" data-choice-selectable="" id="choices--mood-l7-item-choice-28" role="option">
+        Peaceful
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="29" data-value="40" data-choice-selectable="" id="choices--mood-l7-item-choice-29" role="option">
+        positive
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="30" data-value="32" data-choice-selectable="" id="choices--mood-l7-item-choice-30" role="option">
+        powerful
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="31" data-value="16" data-choice-selectable="" id="choices--mood-l7-item-choice-31" role="option">
+        Quirky
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="32" data-value="17" data-choice-selectable="" id="choices--mood-l7-item-choice-32" role="option">
+        relaxed
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="33" data-value="18" data-choice-selectable="" id="choices--mood-l7-item-choice-33" role="option">
+        Restless
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="34" data-value="19" data-choice-selectable="" id="choices--mood-l7-item-choice-34" role="option">
+        romantic
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="35" data-value="20" data-choice-selectable="" id="choices--mood-l7-item-choice-35" role="option">
+        sad
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="36" data-value="21" data-choice-selectable="" id="choices--mood-l7-item-choice-36" role="option">
+        scary
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="37" data-value="31" data-choice-selectable="" id="choices--mood-l7-item-choice-37" role="option">
+        Sentimental
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="38" data-value="22" data-choice-selectable="" id="choices--mood-l7-item-choice-38" role="option">
+        Sexy
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="39" data-value="23" data-choice-selectable="" id="choices--mood-l7-item-choice-39" role="option">
+        Suspense
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="40" data-value="41" data-choice-selectable="" id="choices--mood-l7-item-choice-40" role="option">
+        tense
+      </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="41" data-value="24" data-choice-selectable="" id="choices--mood-l7-item-choice-41" role="option">
+        Weird
+      </div></div></div></div>
+</fieldset>
+</div>
+<div class="col-lg-3">
+<fieldset class="clearfix">
+<div class="radio" style="width: 50%">
+<input type="checkbox" name="version[]" value="regular" id="radio1" onchange="$('#music-search-form').submit();">
+<label for="radio1"><span>Regular</span></label>
+</div>
+<div class="radio" style="width: 50%">
+<input type="checkbox" name="version[]" value="instrumental" id="radio2" onchange="$('#music-search-form').submit();">
+<label for="radio2"><span>Instrumental</span></label>
+</div>
+</fieldset>
+</div>
+</div>
+</div>
+<input type="hidden" name="_token" value="hYuL1xlBxcx6EeMaiMw1aX17QPWFochils57H9ev"></form></div>
+</article>
+<article class="module details">
+    <div class="bg" style="background-image: url('https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/836/1998x1000/mortals-funk-remix-1737075671-f0Fq4IOd7G.jpg')">
+    <div class="tint" style="background: rgba(0,0,0,0.5)"></div>
+    </div>
+    <div class="container-fluid">
+    <div class="row align-items-center">
+    <div class="col-lg-5">
+    <div class="info-black">
+
+    <img src="/static/web/img/logo.png?_m=1597301782" alt="NCS">
+
+<h4>Copyright free music for creators.</h4>
+<p><span style="font-weight: 400;">We work with artists representing all genres of electronic music, generating over </span><strong>500 billion plays globally</strong><span style="font-weight: 400;">. Whether you are MrBeast or just starting to create content, our music will always be </span><strong>free to use</strong><span style="font-weight: 400;">, allowing you to monetise </span><strong>without fear of copyright strikes</strong><span style="font-weight: 400;">.&nbsp;</span></p>
+
+    <a href="/usage-policy" class="btn white">Usage Policy</a>
+
+
+</div>
+    </div>
+    <div class="col-lg-6 offset-lg-1">
+    <div class="row">
+    <div class="col-lg-4">
+    <a href="/MortalsFunk">
+    <div class="inner">
+
+            <div class="img" style="background-image: url('https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/836/850x850/mortals-funk-remix-1737075671-f0Fq4IOd7G.jpg')">
+        <div class="tint" style="background: rgba(0,0,0,0)"></div>
+        </div>
+    
+    </div>
+    </a>
+    </div>
+    <div class="col-lg-8">
+    <div class="info">
+    <div class="category">
+    <img src="/static/web/img/icon-chart.png?_m=1597301782" alt="Featured Release"> Featured Release
+    </div>
+    <h5><a href="/MortalsFunk"> Mortals Funk Remix</a></h5>
+    <span class="tags">
+
+            <a href="/artist/486/warriyo" style="color:#ffffff;">Warriyo</a>, 
+            <a href="/artist/1156/lxngvx" style="color:#ffffff;">LXNGVX</a>
+    
+    </span>
+    <p></p>
+    <div class="buttons clearfix">
+    <a class="btn white player-play" data-url="https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/836/mortals-funk-remix-1737075672-B868z8NMpI.mp3" data-artist="&lt;a href='/artist/486/warriyo' style='color:#191d24;'&gt;Warriyo&lt;/a&gt;, &lt;a href='/artist/1156/lxngvx' style='color:#191d24;'&gt;LXNGVX&lt;/a&gt;" data-artistraw="Warriyo, LXNGVX" data-track="Mortals Funk Remix" data-cover="https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/836/100x100/mortals-funk-remix-1737075671-f0Fq4IOd7G.jpg" data-preview="31" data-tid="533bfba3-7868-4ea2-a161-5d862e13b4b0" data-versions="Regular" data-genre="Brazilian Phonk"><i class="far fa-play-circle"></i> Play</a>
+
+    
+    <a class="btn white panel-btn" data-panel="#download" data-tid="533bfba3-7868-4ea2-a161-5d862e13b4b0"><i class="far fa-arrow-to-bottom"></i> Download</a>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </article>
+<article class="module artists">
+            <div class="container-fluid">
+                <h5>Popular Releases
+                    <div class="grid-list">
+                        <a href="/music?display=list"><span class="icc icc-list"></span></a>
+                        <a href="/music?display=grid"><span class="icc icc-grid active"></span></a>
+                    </div>
+                </h5>
+
+                <div class="row featured-tracks">
+
+    <div class="col-lg-2 item">
+    <a href="/Royalty">
+        <div class="inner">
+
+                    <div class="img" style="background-image: url('https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/936/325x325/royalty-1619082030-xBgqGZWLw9.jpg')"></div>
+        
+        </div>
+        <div class="bottom">
+            <p><strong>Royalty</strong></p>
+            <span class="tags">Maestro Chives, Egzod, Neoni</span>
+        </div>
+    </a>
+    <div class="options">
+        <div class="row align-items-center">
+            <div class="col-6 col-lg-6">
+                <p title="2021-04-22">4 years ago</p>
+                <span><strong>Trap</strong></span>
+            </div>
+            <div class="col-6 col-lg-6">
+                <a class="btn black player-play" data-url="https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/936/royalty-1619082033-7RC2AlRdd1.mp3" data-artist="&lt;a href='/artist/639/maestro-chives' style='color:#191d24;'&gt;Maestro Chives&lt;/a&gt;, &lt;a href='/artist/123/egzod' style='color:#191d24;'&gt;Egzod&lt;/a&gt;, &lt;a href='/artist/519/neoni' style='color:#191d24;'&gt;Neoni&lt;/a&gt;" data-artistraw="Maestro Chives, Egzod, Neoni" data-track="Royalty" data-cover="https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/936/100x100/royalty-1619082030-xBgqGZWLw9.jpg" data-preview="55" data-tid="2b08f7d9-4f5f-47bd-a608-07dec1f7eaa9" data-versions="Regular, Instrumental" data-genre="Trap"><i class="far fa-play-circle"></i> Play</a>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="col-lg-2 item">
+    <a href="/royaltyfunk">
+        <div class="inner">
+
+                    <div class="img" style="background-image: url('https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/889/325x325/royalty-funk-1746180059-mUfwZVybPN.png')"></div>
+        
+        </div>
+        <div class="bottom">
+            <p><strong>Royalty Funk</strong></p>
+            <span class="tags">LXNGVX</span>
+        </div>
+    </a>
+    <div class="options">
+        <div class="row align-items-center">
+            <div class="col-6 col-lg-6">
+                <p title="2025-05-02">2 months ago</p>
+                <span><strong>Brazilian Phonk</strong></span>
+            </div>
+            <div class="col-6 col-lg-6">
+                <a class="btn black player-play" data-url="https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/889/royalty-funk-1746180063-cNbhXdKFRf.mp3" data-artist="&lt;a href='/artist/1156/lxngvx' style='color:#191d24;'&gt;LXNGVX&lt;/a&gt;" data-artistraw="LXNGVX" data-track="Royalty Funk" data-cover="https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/889/100x100/royalty-funk-1746180059-mUfwZVybPN.png" data-preview="122" data-tid="7a583241-0e27-41ee-909a-7eb878f7fb71" data-versions="Regular" data-genre="Brazilian Phonk"><i class="far fa-play-circle"></i> Play</a>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="col-lg-2 item">
+    <a href="/MortalsFunk">
+        <div class="inner">
+
+                    <div class="img" style="background-image: url('https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/836/325x325/mortals-funk-remix-1737075671-f0Fq4IOd7G.jpg')"></div>
+        
+        </div>
+        <div class="bottom">
+            <p><strong>Mortals Funk Remix</strong></p>
+            <span class="tags">Warriyo, LXNGVX</span>
+        </div>
+    </a>
+    <div class="options">
+        <div class="row align-items-center">
+            <div class="col-6 col-lg-6">
+                <p title="2025-01-17">6 months ago</p>
+                <span><strong>Brazilian Phonk</strong></span>
+            </div>
+            <div class="col-6 col-lg-6">
+                <a class="btn black player-play" data-url="https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/836/mortals-funk-remix-1737075672-B868z8NMpI.mp3" data-artist="&lt;a href='/artist/486/warriyo' style='color:#191d24;'&gt;Warriyo&lt;/a&gt;, &lt;a href='/artist/1156/lxngvx' style='color:#191d24;'&gt;LXNGVX&lt;/a&gt;" data-artistraw="Warriyo, LXNGVX" data-track="Mortals Funk Remix" data-cover="https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/836/100x100/mortals-funk-remix-1737075671-f0Fq4IOd7G.jpg" data-preview="31" data-tid="533bfba3-7868-4ea2-a161-5d862e13b4b0" data-versions="Regular" data-genre="Brazilian Phonk"><i class="far fa-play-circle"></i> Play</a>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="col-lg-2 item">
+    <a href="/MontagemToma">
+        <div class="inner">
+
+                    <div class="img" style="background-image: url('https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/891/325x325/montagem-toma-1746748860-6K4yovfivX.png')"></div>
+        
+        </div>
+        <div class="bottom">
+            <p><strong>Montagem Toma</strong></p>
+            <span class="tags">X972, sk3tch01, MXZI</span>
+        </div>
+    </a>
+    <div class="options">
+        <div class="row align-items-center">
+            <div class="col-6 col-lg-6">
+                <p title="2025-05-09">2 months ago</p>
+                <span><strong>Brazilian Phonk</strong></span>
+            </div>
+            <div class="col-6 col-lg-6">
+                <a class="btn black player-play" data-url="https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/891/1748533196_2w2lQuHMYe_MXZI-sk3tch01-X972---Montagem-Toma.mp3" data-artist="&lt;a href='/artist/1268/x972' style='color:#191d24;'&gt;X972&lt;/a&gt;, &lt;a href='/artist/1267/sk3tch01' style='color:#191d24;'&gt;sk3tch01&lt;/a&gt;, &lt;a href='/artist/1266/mxzi' style='color:#191d24;'&gt;MXZI&lt;/a&gt;" data-artistraw="X972, sk3tch01, MXZI" data-track="Montagem Toma" data-cover="https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/891/100x100/montagem-toma-1746748860-6K4yovfivX.png" data-preview="7" data-tid="e7884c05-656b-4911-9a36-34e060706645" data-versions="Regular" data-genre="Brazilian Phonk"><i class="far fa-play-circle"></i> Play</a>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="col-lg-2 item">
+    <a href="/mortals">
+        <div class="inner">
+
+                    <div class="img" style="background-image: url('https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/287/325x325/mortals-feat-laura-brehm-1586948734-yFnA6l5Geq.jpg')"></div>
+        
+        </div>
+        <div class="bottom">
+            <p><strong>Mortals (feat. Laura Brehm)</strong></p>
+            <span class="tags">Warriyo, Laura Brehm</span>
+        </div>
+    </a>
+    <div class="options">
+        <div class="row align-items-center">
+            <div class="col-6 col-lg-6">
+                <p title="2016-12-15">8 years ago</p>
+                <span><strong>Trap</strong></span>
+            </div>
+            <div class="col-6 col-lg-6">
+                <a class="btn black player-play" data-url="https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/287/mortals-feat-laura-brehm-1586948736-3e1Snmxk7T.mp3" data-artist="&lt;a href='/artist/486/warriyo' style='color:#191d24;'&gt;Warriyo&lt;/a&gt;, &lt;a href='/artist/263/laura-brehm' style='color:#191d24;'&gt;Laura Brehm&lt;/a&gt;" data-artistraw="Warriyo, Laura Brehm" data-track="Mortals (feat. Laura Brehm)" data-cover="https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/287/100x100/mortals-feat-laura-brehm-1586948734-yFnA6l5Geq.jpg" data-preview="144" data-tid="784a2ccc-5ace-48d1-8af1-9da55c383960" data-versions="Regular" data-genre="Trap"><i class="far fa-play-circle"></i> Play</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+                <h5>Recent Releases</h5>
+                <div class="row">
+
+                                    <div class="col-lg-2 item">
+    <a href="/digitaldeath">
+        <div class="inner">
+
+                    <div class="img" style="background-image: url('https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/938/325x325/digital-death-1753747262-shgPd7e2QJ.png')"></div>
+        
+        </div>
+        <div class="bottom">
+            <p><strong>digital death</strong></p>
+            <span class="tags">Kim</span>
+        </div>
+    </a>
+    <div class="options">
+        <div class="row align-items-center">
+            <div class="col-6 col-lg-6">
+                <p title="2025-07-29">1 day ago</p>
+                <span><strong>Witch House</strong></span>
+            </div>
+            <div class="col-6 col-lg-6">
+                <a class="btn black player-play" data-url="https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/938/digital-death-1753747264-AO6BW8pMLN.mp3" data-artist="&lt;a href='/artist/1310/kim' style='color:#191d24;'&gt;Kim&lt;/a&gt;" data-artistraw="Kim" data-track="digital death" data-cover="https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/938/100x100/digital-death-1753747262-shgPd7e2QJ.png" data-preview="35" data-tid="57f17860-6bc0-479f-96c1-5151e57e53c0" data-versions="Regular" data-genre="Witch House"><i class="far fa-play-circle"></i> Play</a>
+            </div>
+        </div>
+    </div>
+</div>
+                                    <div class="col-lg-2 item">
+    <a href="/Overheat">
+        <div class="inner">
+
+                    <div class="img" style="background-image: url('https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/933/325x325/overheat-1753401661-jCw57CrERF.jpg')"></div>
+        
+        </div>
+        <div class="bottom">
+            <p><strong>Overheat</strong></p>
+            <span class="tags">Cartoon</span>
+        </div>
+    </a>
+    <div class="options">
+        <div class="row align-items-center">
+            <div class="col-6 col-lg-6">
+                <p title="2025-07-25">5 days ago</p>
+                <span><strong>Drum &amp; Bass</strong></span>
+            </div>
+            <div class="col-6 col-lg-6">
+                <a class="btn black player-play" data-url="https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/933/overheat-1753401663-XiLNKZXuMQ.mp3" data-artist="&lt;a href='/artist/73/cartoon' style='color:#191d24;'&gt;Cartoon&lt;/a&gt;" data-artistraw="Cartoon" data-track="Overheat" data-cover="https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/933/100x100/overheat-1753401661-jCw57CrERF.jpg" data-preview="64" data-tid="1ec62f16-3f57-4ef9-bfcd-091223d45f74" data-versions="Regular, Instrumental" data-genre="Drum &amp; Bass"><i class="far fa-play-circle"></i> Play</a>
+            </div>
+        </div>
+    </div>
+</div>
+                                    <div class="col-lg-2 item">
+    <a href="/DoItAll">
+        <div class="inner">
+
+                    <div class="img" style="background-image: url('https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/934/325x325/do-it-all-1753401670-NWheLbYfQb.jpg')"></div>
+        
+        </div>
+        <div class="bottom">
+            <p><strong>Do It All</strong></p>
+            <span class="tags">Cartoon</span>
+        </div>
+    </a>
+    <div class="options">
+        <div class="row align-items-center">
+            <div class="col-6 col-lg-6">
+                <p title="2025-07-25">5 days ago</p>
+                <span><strong>Drum &amp; Bass</strong></span>
+            </div>
+            <div class="col-6 col-lg-6">
+                <a class="btn black player-play" data-url="https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/934/do-it-all-1753401672-mqUmgLQl39.mp3" data-artist="&lt;a href='/artist/73/cartoon' style='color:#191d24;'&gt;Cartoon&lt;/a&gt;" data-artistraw="Cartoon" data-track="Do It All" data-cover="https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/934/100x100/do-it-all-1753401670-NWheLbYfQb.jpg" data-preview="65" data-tid="6718798d-4402-445a-896c-4f089c9b9598" data-versions="Regular, Instrumental" data-genre="Drum &amp; Bass"><i class="far fa-play-circle"></i> Play</a>
+            </div>
+        </div>
+    </div>
+</div>
+                                    <div class="col-lg-2 item">
+    <a href="/Whiplash">
+        <div class="inner">
+
+                    <div class="img" style="background-image: url('https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/935/325x325/whiplash-1753401676-JTecfK3BPO.jpg')"></div>
+        
+        </div>
+        <div class="bottom">
+            <p><strong>Whiplash</strong></p>
+            <span class="tags">Cartoon</span>
+        </div>
+    </a>
+    <div class="options">
+        <div class="row align-items-center">
+            <div class="col-6 col-lg-6">
+                <p title="2025-07-25">5 days ago</p>
+                <span><strong>Drum &amp; Bass</strong></span>
+            </div>
+            <div class="col-6 col-lg-6">
+                <a class="btn black player-play" data-url="https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/935/whiplash-1753401678-PIShhKSwKc.mp3" data-artist="&lt;a href='/artist/73/cartoon' style='color:#191d24;'&gt;Cartoon&lt;/a&gt;" data-artistraw="Cartoon" data-track="Whiplash" data-cover="https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/935/100x100/whiplash-1753401676-JTecfK3BPO.jpg" data-preview="45" data-tid="c65e1393-321c-4e3f-b4bb-b444043a6235" data-versions="Regular, Instrumental" data-genre="Drum &amp; Bass"><i class="far fa-play-circle"></i> Play</a>
+            </div>
+        </div>
+    </div>
+</div>
+                                    <div class="col-lg-2 item">
+    <a href="/Spicy">
+        <div class="inner">
+
+                    <div class="img" style="background-image: url('https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/936/325x325/spicy-1753401683-lCxhgFEIkO.jpg')"></div>
+        
+        </div>
+        <div class="bottom">
+            <p><strong>Spicy</strong></p>
+            <span class="tags">Cartoon</span>
+        </div>
+    </a>
+    <div class="options">
+        <div class="row align-items-center">
+            <div class="col-6 col-lg-6">
+                <p title="2025-07-25">5 days ago</p>
+                <span><strong>Dubstep</strong></span>
+            </div>
+            <div class="col-6 col-lg-6">
+                <a class="btn black player-play" data-url="https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/936/spicy-1753401685-iT8S1vbWcj.mp3" data-artist="&lt;a href='/artist/73/cartoon' style='color:#191d24;'&gt;Cartoon&lt;/a&gt;" data-artistraw="Cartoon" data-track="Spicy" data-cover="https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/936/100x100/spicy-1753401683-lCxhgFEIkO.jpg" data-preview="43" data-tid="967744b7-7384-47d8-a8b7-c2bcb825950a" data-versions="Regular, Instrumental" data-genre="Dubstep"><i class="far fa-play-circle"></i> Play</a>
+            </div>
+        </div>
+    </div>
+</div>
+                                    <div class="col-lg-2 item">
+    <a href="/Dependant">
+        <div class="inner">
+
+                    <div class="img" style="background-image: url('https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/937/325x325/dependant-1753401689-szCyQtIzQf.jpg')"></div>
+        
+        </div>
+        <div class="bottom">
+            <p><strong>Dependant</strong></p>
+            <span class="tags">Cartoon</span>
+        </div>
+    </a>
+    <div class="options">
+        <div class="row align-items-center">
+            <div class="col-6 col-lg-6">
+                <p title="2025-07-25">5 days ago</p>
+                <span><strong>Drum &amp; Bass</strong></span>
+            </div>
+            <div class="col-6 col-lg-6">
+                <a class="btn black player-play" data-url="https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/937/dependant-1753401691-ERQ9HipO4q.mp3" data-artist="&lt;a href='/artist/73/cartoon' style='color:#191d24;'&gt;Cartoon&lt;/a&gt;" data-artistraw="Cartoon" data-track="Dependant" data-cover="https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/937/100x100/dependant-1753401689-szCyQtIzQf.jpg" data-preview="66" data-tid="35fee7b4-b225-468f-b275-8d1d50e32b50" data-versions="Regular, Instrumental" data-genre="Drum &amp; Bass"><i class="far fa-play-circle"></i> Play</a>
+            </div>
+        </div>
+    </div>
+</div>
+                                    <div class="col-lg-2 item">
+    <a href="/SkyVerse">
+        <div class="inner">
+
+                    <div class="img" style="background-image: url('https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/932/325x325/sky-verse-1753315261-E7DGvky63q.jpg')"></div>
+        
+        </div>
+        <div class="bottom">
+            <p><strong>Sky Verse</strong></p>
+            <span class="tags">Lieless, Luuna, Yarimov</span>
+        </div>
+    </a>
+    <div class="options">
+        <div class="row align-items-center">
+            <div class="col-6 col-lg-6">
+                <p title="2025-07-24">6 days ago</p>
+                <span><strong>Brazilian Phonk</strong></span>
+            </div>
+            <div class="col-6 col-lg-6">
+                <a class="btn black player-play" data-url="https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/932/sky-verse-1753315264-yJlMg65j6p.mp3" data-artist="&lt;a href='/artist/1308/lieless' style='color:#191d24;'&gt;Lieless&lt;/a&gt;, &lt;a href='/artist/1309/luuna' style='color:#191d24;'&gt;Luuna&lt;/a&gt;, &lt;a href='/artist/1307/yarimov' style='color:#191d24;'&gt;Yarimov&lt;/a&gt;" data-artistraw="Lieless, Luuna, Yarimov" data-track="Sky Verse" data-cover="https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/932/100x100/sky-verse-1753315261-E7DGvky63q.jpg" data-preview="7" data-tid="083d7c48-385a-4294-bf7f-be04b14c04ff" data-versions="Regular" data-genre="Brazilian Phonk"><i class="far fa-play-circle"></i> Play</a>
+            </div>
+        </div>
+    </div>
+</div>
+                                    <div class="col-lg-2 item">
+    <a href="/HerBody">
+        <div class="inner">
+
+                    <div class="img" style="background-image: url('https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/930/325x325/her-body-1753142463-mLaEHq78ih.png')"></div>
+        
+        </div>
+        <div class="bottom">
+            <p><strong>Her Body</strong></p>
+            <span class="tags">QKReign, DMHP_SKN</span>
+        </div>
+    </a>
+    <div class="options">
+        <div class="row align-items-center">
+            <div class="col-6 col-lg-6">
+                <p title="2025-07-22">1 week ago</p>
+                <span><strong>Jersey Club</strong></span>
+            </div>
+            <div class="col-6 col-lg-6">
+                <a class="btn black player-play" data-url="https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/930/her-body-1753142465-rCKeoztiLi.mp3" data-artist="&lt;a href='/artist/1275/qkreign' style='color:#191d24;'&gt;QKReign&lt;/a&gt;, &lt;a href='/artist/1306/dmhp-skn' style='color:#191d24;'&gt;DMHP_SKN&lt;/a&gt;" data-artistraw="QKReign, DMHP_SKN" data-track="Her Body" data-cover="https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/930/100x100/her-body-1753142463-mLaEHq78ih.png" data-preview="0" data-tid="83fa0130-52a8-4b7a-b0f0-5fa519d1f603" data-versions="Regular" data-genre="Jersey Club"><i class="far fa-play-circle"></i> Play</a>
+            </div>
+        </div>
+    </div>
+</div>
+                                    <div class="col-lg-2 item">
+    <a href="/soulforge">
+        <div class="inner">
+
+                    <div class="img" style="background-image: url('https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/931/325x325/soulforge-1753142468-Y3LABgMgp6.jpg')"></div>
+        
+        </div>
+        <div class="bottom">
+            <p><strong>soulforge</strong></p>
+            <span class="tags">dezoliar, glossier, TWISTED</span>
+        </div>
+    </a>
+    <div class="options">
+        <div class="row align-items-center">
+            <div class="col-6 col-lg-6">
+                <p title="2025-07-22">1 week ago</p>
+                <span><strong>Witch House</strong></span>
+            </div>
+            <div class="col-6 col-lg-6">
+                <a class="btn black player-play" data-url="https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/931/soulforge-1753142469-k8MlCPfbNw.mp3" data-artist="&lt;a href='/artist/1305/dezoliar' style='color:#191d24;'&gt;dezoliar&lt;/a&gt;, &lt;a href='/artist/1304/glossier' style='color:#191d24;'&gt;glossier&lt;/a&gt;, &lt;a href='/artist/1060/twisted' style='color:#191d24;'&gt;TWISTED&lt;/a&gt;" data-artistraw="dezoliar, glossier, TWISTED" data-track="soulforge" data-cover="https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/931/100x100/soulforge-1753142468-Y3LABgMgp6.jpg" data-preview="16" data-tid="1abcba02-2231-44ba-9c01-dab4117c7654" data-versions="Regular" data-genre="Witch House"><i class="far fa-play-circle"></i> Play</a>
+            </div>
+        </div>
+    </div>
+</div>
+                                    <div class="col-lg-2 item">
+    <a href="/C_euphoria">
+        <div class="inner">
+
+                    <div class="img" style="background-image: url('https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/929/325x325/euphoria-1752796862-7bFNs2A8kL.png')"></div>
+        
+        </div>
+        <div class="bottom">
+            <p><strong>Euphoria</strong></p>
+            <span class="tags">Cartoon, VALLO, KAZHI, Blooom</span>
+        </div>
+    </a>
+    <div class="options">
+        <div class="row align-items-center">
+            <div class="col-6 col-lg-6">
+                <p title="2025-07-18">1 week ago</p>
+                <span><strong>Drum &amp; Bass</strong></span>
+            </div>
+            <div class="col-6 col-lg-6">
+                <a class="btn black player-play" data-url="https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/929/euphoria-1752796864-8afg8OUTHY.mp3" data-artist="&lt;a href='/artist/73/cartoon' style='color:#191d24;'&gt;Cartoon&lt;/a&gt;, &lt;a href='/artist/1273/vallo' style='color:#191d24;'&gt;VALLO&lt;/a&gt;, &lt;a href='/artist/1264/kazhi' style='color:#191d24;'&gt;KAZHI&lt;/a&gt;, &lt;a href='/artist/55/blooom' style='color:#191d24;'&gt;Blooom&lt;/a&gt;" data-artistraw="Cartoon, VALLO, KAZHI, Blooom" data-track="Euphoria" data-cover="https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/929/100x100/euphoria-1752796862-7bFNs2A8kL.png" data-preview="75" data-tid="25dc9e59-bfba-4f95-85bd-4f0eed6ea07e" data-versions="Regular, Instrumental" data-genre="Drum &amp; Bass"><i class="far fa-play-circle"></i> Play</a>
+            </div>
+        </div>
+    </div>
+</div>
+                                    <div class="col-lg-2 item">
+    <a href="/TheSound">
+        <div class="inner">
+
+                    <div class="img" style="background-image: url('https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/928/325x325/the-sound-1752710462-a8OV9dEaHf.png')"></div>
+        
+        </div>
+        <div class="bottom">
+            <p><strong>The Sound</strong></p>
+            <span class="tags">Fluorescents, Mazare</span>
+        </div>
+    </a>
+    <div class="options">
+        <div class="row align-items-center">
+            <div class="col-6 col-lg-6">
+                <p title="2025-07-17">1 week ago</p>
+                <span><strong>Drum &amp; Bass</strong></span>
+            </div>
+            <div class="col-6 col-lg-6">
+                <a class="btn black player-play" data-url="https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/928/the-sound-1752710465-tuslnyGztG.mp3" data-artist="&lt;a href='/artist/1303/fluorescents' style='color:#191d24;'&gt;Fluorescents&lt;/a&gt;, &lt;a href='/artist/1302/mazare' style='color:#191d24;'&gt;Mazare&lt;/a&gt;" data-artistraw="Fluorescents, Mazare" data-track="The Sound" data-cover="https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/928/100x100/the-sound-1752710462-a8OV9dEaHf.png" data-preview="164" data-tid="3393ac6d-0910-481d-85a5-1506cd2461ea" data-versions="Regular" data-genre="Drum &amp; Bass"><i class="far fa-play-circle"></i> Play</a>
+            </div>
+        </div>
+    </div>
+</div>
+                                    <div class="col-lg-2 item">
+    <a href="/TS_OnMyMind">
+        <div class="inner">
+
+                    <div class="img" style="background-image: url('https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/927/325x325/on-my-mind-1752537662-o1e8Qqtl6d.jpg')"></div>
+        
+        </div>
+        <div class="bottom">
+            <p><strong>On My Mind</strong></p>
+            <span class="tags">Slenderino, Tatsunoshin</span>
+        </div>
+    </a>
+    <div class="options">
+        <div class="row align-items-center">
+            <div class="col-6 col-lg-6">
+                <p title="2025-07-15">2 weeks ago</p>
+                <span><strong>Hardcore</strong></span>
+            </div>
+            <div class="col-6 col-lg-6">
+                <a class="btn black player-play" data-url="https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/927/on-my-mind-1752537664-RVzObzOTfO.mp3" data-artist="&lt;a href='/artist/1301/slenderino' style='color:#191d24;'&gt;Slenderino&lt;/a&gt;, &lt;a href='/artist/856/tatsunoshin' style='color:#191d24;'&gt;Tatsunoshin&lt;/a&gt;" data-artistraw="Slenderino, Tatsunoshin" data-track="On My Mind" data-cover="https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/927/100x100/on-my-mind-1752537662-o1e8Qqtl6d.jpg" data-preview="60" data-tid="801403ef-f73b-4795-b97f-b5c9cf3e50e5" data-versions="Regular, Instrumental" data-genre="Hardcore"><i class="far fa-play-circle"></i> Play</a>
+            </div>
+        </div>
+    </div>
+</div>
+                                    <div class="col-lg-2 item">
+    <a href="/victim">
+        <div class="inner">
+
+                    <div class="img" style="background-image: url('https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/926/325x325/victim-1752192062-5E5Nbx4z0a.jpg')"></div>
+        
+        </div>
+        <div class="bottom">
+            <p><strong>Victim</strong></p>
+            <span class="tags">STM, MRJay</span>
+        </div>
+    </a>
+    <div class="options">
+        <div class="row align-items-center">
+            <div class="col-6 col-lg-6">
+                <p title="2025-07-11">2 weeks ago</p>
+                <span><strong>Witch House</strong></span>
+            </div>
+            <div class="col-6 col-lg-6">
+                <a class="btn black player-play" data-url="https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/926/victim-1752192064-VnCE1Bv0RG.mp3" data-artist="&lt;a href='/artist/1299/stm' style='color:#191d24;'&gt;STM&lt;/a&gt;, &lt;a href='/artist/1300/mrjay' style='color:#191d24;'&gt;MRJay&lt;/a&gt;" data-artistraw="STM, MRJay" data-track="Victim" data-cover="https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/926/100x100/victim-1752192062-5E5Nbx4z0a.jpg" data-preview="42" data-tid="fe5da49f-e558-4ab5-8400-06ee58782c07" data-versions="Regular" data-genre="Witch House"><i class="far fa-play-circle"></i> Play</a>
+            </div>
+        </div>
+    </div>
+</div>
+                                    <div class="col-lg-2 item">
+    <a href="/JS_AllINeed">
+        <div class="inner">
+
+                    <div class="img" style="background-image: url('https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/925/325x325/all-i-need-1752105662-Wrikk0L6OX.jpg')"></div>
+        
+        </div>
+        <div class="bottom">
+            <p><strong>All I Need</strong></p>
+            <span class="tags">jeonghyeon, SUNGYOO</span>
+        </div>
+    </a>
+    <div class="options">
+        <div class="row align-items-center">
+            <div class="col-6 col-lg-6">
+                <p title="2025-07-10">2 weeks ago</p>
+                <span><strong>Future House</strong></span>
+            </div>
+            <div class="col-6 col-lg-6">
+                <a class="btn black player-play" data-url="https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/925/all-i-need-1752105664-i7xcxePI5E.mp3" data-artist="&lt;a href='/artist/611/jeonghyeon' style='color:#191d24;'&gt;jeonghyeon&lt;/a&gt;, &lt;a href='/artist/1298/sungyoo' style='color:#191d24;'&gt;SUNGYOO&lt;/a&gt;" data-artistraw="jeonghyeon, SUNGYOO" data-track="All I Need" data-cover="https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/925/100x100/all-i-need-1752105662-Wrikk0L6OX.jpg" data-preview="30" data-tid="d80ce5e5-3842-45ec-8235-b7e0f68b18c7" data-versions="Regular" data-genre="Future House"><i class="far fa-play-circle"></i> Play</a>
+            </div>
+        </div>
+    </div>
+</div>
+                                    <div class="col-lg-2 item">
+    <a href="/miffycafe">
+        <div class="inner">
+
+                    <div class="img" style="background-image: url('https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/924/325x325/miffy-cafe-1752058860-YiqW3IIGPt.png')"></div>
+        
+        </div>
+        <div class="bottom">
+            <p><strong>miffy cafe </strong></p>
+            <span class="tags">sakuracloud</span>
+        </div>
+    </a>
+    <div class="options">
+        <div class="row align-items-center">
+            <div class="col-6 col-lg-6">
+                <p title="2025-07-08">3 weeks ago</p>
+                <span><strong>Lofi Hip-Hop</strong></span>
+            </div>
+            <div class="col-6 col-lg-6">
+                <a class="btn black player-play" data-url="https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/924/miffy-cafe-1752058862-g0Mxp2jNdj.mp3" data-artist="&lt;a href='/artist/1297/sakuracloud' style='color:#191d24;'&gt;sakuracloud&lt;/a&gt;" data-artistraw="sakuracloud" data-track="miffy cafe " data-cover="https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/924/100x100/miffy-cafe-1752058860-YiqW3IIGPt.png" data-preview="0" data-tid="6e7b0be0-2091-47e6-a616-fca40ade258b" data-versions="Regular" data-genre="Lofi Hip-Hop"><i class="far fa-play-circle"></i> Play</a>
+            </div>
+        </div>
+    </div>
+</div>
+                                    <div class="col-lg-2 item">
+    <a href="/SoSweet">
+        <div class="inner">
+
+                    <div class="img" style="background-image: url('https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/922/325x325/1751628953_zX0RA73CDw_ALEXYS-Strn.---So-Sweet-Cover-Art.png')"></div>
+        
+        </div>
+        <div class="bottom">
+            <p><strong>So Sweet</strong></p>
+            <span class="tags">ALEXYS, Strn.</span>
+        </div>
+    </a>
+    <div class="options">
+        <div class="row align-items-center">
+            <div class="col-6 col-lg-6">
+                <p title="2025-07-04">3 weeks ago</p>
+                <span><strong>Speed Garage</strong></span>
+            </div>
+            <div class="col-6 col-lg-6">
+                <a class="btn black player-play" data-url="https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/922/so-sweet-1751587262-1UEtP6sHvl.mp3" data-artist="&lt;a href='/artist/1295/alexys' style='color:#191d24;'&gt;ALEXYS&lt;/a&gt;, &lt;a href='/artist/1294/strn' style='color:#191d24;'&gt;Strn.&lt;/a&gt;" data-artistraw="ALEXYS, Strn." data-track="So Sweet" data-cover="https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/922/100x100/1751628953_zX0RA73CDw_ALEXYS-Strn.---So-Sweet-Cover-Art.png" data-preview="79" data-tid="2348f702-0a74-4836-9c11-9f005172683e" data-versions="Regular" data-genre="Speed Garage"><i class="far fa-play-circle"></i> Play</a>
+            </div>
+        </div>
+    </div>
+</div>
+                                    <div class="col-lg-2 item">
+    <a href="/rockpaperscissors">
+        <div class="inner">
+
+                    <div class="img" style="background-image: url('https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/921/325x325/rock-paper-scissors-1751500862-WE2igIca6P.png')"></div>
+        
+        </div>
+        <div class="bottom">
+            <p><strong>ROCK PAPER SCISSORS!</strong></p>
+            <span class="tags">Dyolow</span>
+        </div>
+    </a>
+    <div class="options">
+        <div class="row align-items-center">
+            <div class="col-6 col-lg-6">
+                <p title="2025-07-03">3 weeks ago</p>
+                <span><strong>Pluggnb</strong></span>
+            </div>
+            <div class="col-6 col-lg-6">
+                <a class="btn black player-play" data-url="https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/921/rock-paper-scissors-1751500864-pFZm0Uogll.mp3" data-artist="&lt;a href='/artist/1293/dyolow' style='color:#191d24;'&gt;Dyolow&lt;/a&gt;" data-artistraw="Dyolow" data-track="ROCK PAPER SCISSORS!" data-cover="https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/921/100x100/rock-paper-scissors-1751500862-WE2igIca6P.png" data-preview="0" data-tid="b6c2f094-f539-451a-beb7-9f641ab8faaa" data-versions="Regular" data-genre="Pluggnb"><i class="far fa-play-circle"></i> Play</a>
+            </div>
+        </div>
+    </div>
+</div>
+                                    <div class="col-lg-2 item">
+    <a href="/musicismytherapy">
+        <div class="inner">
+
+                    <div class="img" style="background-image: url('https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/920/325x325/musicismytherapy-1751328061-RLnJZwX3Ws.jpg')"></div>
+        
+        </div>
+        <div class="bottom">
+            <p><strong>musicismytherapy</strong></p>
+            <span class="tags">chy deep</span>
+        </div>
+    </a>
+    <div class="options">
+        <div class="row align-items-center">
+            <div class="col-6 col-lg-6">
+                <p title="2025-07-01">4 weeks ago</p>
+                <span><strong>Drum &amp; Bass</strong></span>
+            </div>
+            <div class="col-6 col-lg-6">
+                <a class="btn black player-play" data-url="https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/920/1751470373_4mshqlS4k1_chy-deep---musicismytherapy.mp3" data-artist="&lt;a href='/artist/1292/chy-deep' style='color:#191d24;'&gt;chy deep&lt;/a&gt;" data-artistraw="chy deep" data-track="musicismytherapy" data-cover="https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/920/100x100/musicismytherapy-1751328061-RLnJZwX3Ws.jpg" data-preview="41" data-tid="b294acc7-00eb-490c-85b2-541025ad3131" data-versions="Regular" data-genre="Drum &amp; Bass"><i class="far fa-play-circle"></i> Play</a>
+            </div>
+        </div>
+    </div>
+</div>
+                                    <div class="col-lg-2 item">
+    <a href="/youthghost">
+        <div class="inner">
+
+                    <div class="img" style="background-image: url('https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/917/325x325/ghost-1751025658-VidT6QnM2c.jpg')"></div>
+        
+        </div>
+        <div class="bottom">
+            <p><strong>ghost</strong></p>
+            <span class="tags">youth®</span>
+        </div>
+    </a>
+    <div class="options">
+        <div class="row align-items-center">
+            <div class="col-6 col-lg-6">
+                <p title="2025-06-27">1 month ago</p>
+                <span><strong>Indie Dance</strong></span>
+            </div>
+            <div class="col-6 col-lg-6">
+                <a class="btn black player-play" data-url="https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/917/ghost-1751025660-io22pBCfSr.mp3" data-artist="&lt;a href='/artist/1285/youth' style='color:#191d24;'&gt;youth®&lt;/a&gt;" data-artistraw="youth®" data-track="ghost" data-cover="https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/917/100x100/ghost-1751025658-VidT6QnM2c.jpg" data-preview="0" data-tid="b53c5ebd-4b17-436a-ab27-2877c7c2d5d8" data-versions="Regular" data-genre="Indie Dance"><i class="far fa-play-circle"></i> Play</a>
+            </div>
+        </div>
+    </div>
+</div>
+                                    <div class="col-lg-2 item">
+    <a href="/snakeeyes">
+        <div class="inner">
+
+                    <div class="img" style="background-image: url('https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/918/325x325/snake-eyes-1751025661-qkbFtd9axD.jpg')"></div>
+        
+        </div>
+        <div class="bottom">
+            <p><strong>snake eyes</strong></p>
+            <span class="tags">youth®</span>
+        </div>
+    </a>
+    <div class="options">
+        <div class="row align-items-center">
+            <div class="col-6 col-lg-6">
+                <p title="2025-06-27">1 month ago</p>
+                <span><strong></strong></span>
+            </div>
+            <div class="col-6 col-lg-6">
+                <a class="btn black player-play" data-url="https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/918/snake-eyes-1751025663-4rEVt9WCxp.mp3" data-artist="&lt;a href='/artist/1285/youth' style='color:#191d24;'&gt;youth®&lt;/a&gt;" data-artistraw="youth®" data-track="snake eyes" data-cover="https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/001/918/100x100/snake-eyes-1751025661-qkbFtd9axD.jpg" data-preview="30" data-tid="e4d3dcca-b9bf-44ac-a44c-112a8dc80d94" data-versions="Regular" data-genre=""><i class="far fa-play-circle"></i> Play</a>
+            </div>
+        </div>
+    </div>
+</div>
+                
+                </div>
+            </div>
+        </article>
+    
+    <ul class="pagination">
+        
+                    <li class="page-item disabled" aria-disabled="true" aria-label="« Previous">
+                <span class="page-link" aria-hidden="true">‹</span>
+            </li>
+        
+        
+                    
+            
+            
+                                                                        <li class="page-item active" aria-current="page"><span class="page-link">1</span></li>
+                                                                                <li class="page-item"><a class="page-link" href="https://ncs.io?display=&amp;page=2">2</a></li>
+                                                                                <li class="page-item"><a class="page-link" href="https://ncs.io?display=&amp;page=3">3</a></li>
+                                                                                <li class="page-item"><a class="page-link" href="https://ncs.io?display=&amp;page=4">4</a></li>
+                                                                                <li class="page-item"><a class="page-link" href="https://ncs.io?display=&amp;page=5">5</a></li>
+                                                                                <li class="page-item"><a class="page-link" href="https://ncs.io?display=&amp;page=6">6</a></li>
+                                                                                <li class="page-item"><a class="page-link" href="https://ncs.io?display=&amp;page=7">7</a></li>
+                                                                                <li class="page-item"><a class="page-link" href="https://ncs.io?display=&amp;page=8">8</a></li>
+                                                                    
+                            <li class="page-item disabled" aria-disabled="true"><span class="page-link">...</span></li>
+            
+            
+                                
+            
+            
+                                                                        <li class="page-item"><a class="page-link" href="https://ncs.io?display=&amp;page=90">90</a></li>
+                                                                                <li class="page-item"><a class="page-link" href="https://ncs.io?display=&amp;page=91">91</a></li>
+                                                        
+        
+                    <li class="page-item">
+                <a class="page-link" href="https://ncs.io?display=&amp;page=2" rel="next" aria-label="Next »">›</a>
+            </li>
+            </ul>
+
+
+
+</main>
+<article class="module player" id="global-player" style="display: none">
+    <div class="floating">
+    <div class="expand">
+    <a class="expand-btn"><i class="far fa-minus-circle"></i></a>
+    </div>
+    <div class="container-fluid">
+    <div class="row">
+    <div class="col-lg-4">
+    <div class="cover clearfix">
+    <img class="x-player-cover" src="/static/web/img/no-track.png?_m=1693299337" alt="" title="">
+    <p><strong class="x-player-track">Track</strong></p>
+    <span class="x-player-artist">Artist</span>
+    </div>
+    </div>
+    <div class="col-lg-4">
+    <div class="player-holder">
+    <div class="nest">
+    <a class="play-btn"><i class="far fa-play-circle"></i></a>
+    <a class="pause-btn"><i class="far fa-pause-circle"></i></a>
+    <div class="waveform" id="player" data-url=""></div>
+    </div>
+    </div>
+    </div>
+    <div class="col-lg-4">
+    <div class="buttons clearfix">
+    <div class="checkbox">
+    <input type="checkbox" id="preview-player">
+    <label for="preview-player">Preview</label>
+    </div>
+    <a class="btn black panel-btn x-player-tid" data-panel="#download" data-tid="0"><i class="far fa-arrow-to-bottom"></i> Download</a>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </article>
+<footer>
+
+    <div class="container-fluid">
+    <div class="row">
+    <div class="col-12 text-center social-media">
+
+                        <a href="https://ncs.lnk.to/SpotfiyPlaylistWE" target="_blank"> <img src="https://ncsmusic.s3.eu-west-1.amazonaws.com/social-links/000/000/001/1691764744_1qszULdYbm_spotify.svg" alt="Spotify"> </a>
+                                <a href="https://music.apple.com/profile/nocopyrightsounds" target="_blank"> <img src="https://ncsmusic.s3.eu-west-1.amazonaws.com/social-links/000/000/002/1691764937_EcEcxzZBRI_apple.svg" alt="Apple Music"> </a>
+                                <a href="https://www.tiktok.com/@nocopyrightsounds" target="_blank"> <img src="https://ncsmusic.s3.eu-west-1.amazonaws.com/social-links/000/000/003/1691765143_xnXb2p0CQX_tiktok.svg" alt="TikTok"> </a>
+                                <a href="https://www.instagram.com/nocopyrightsounds/" target="_blank"> <img src="https://ncsmusic.s3.eu-west-1.amazonaws.com/social-links/000/000/004/1691765545_zUsDyv3fjp_instagram.svg" alt="Instagram"> </a>
+                                <a href="https://www.youtube.com/nocopyrightsounds" target="_blank"> <img src="https://ncsmusic.s3.eu-west-1.amazonaws.com/social-links/000/000/005/1691765587_3jQGCufgfS_youtube.svg" alt="YouTube"> </a>
+                                <a href="https://www.facebook.com/NoCopyrightSounds/" target="_blank"> <img src="https://ncsmusic.s3.eu-west-1.amazonaws.com/social-links/000/000/006/1691765622_pKK6BRISkJ_facebook-f.svg" alt="Facebook"> </a>
+                                <a href="https://www.twitch.tv/nocopyrightsounds" target="_blank"> <img src="https://ncsmusic.s3.eu-west-1.amazonaws.com/social-links/000/000/007/1691765635_uzzDlRGd99_twitch.svg" alt="Twitch"> </a>
+                                <a href="https://twitter.com/ncsounds" target="_blank"> <img src="https://ncsmusic.s3.eu-west-1.amazonaws.com/social-links/000/000/008/1691765647_KadoOr94t9_twitter.svg" alt="Twitter"> </a>
+            
+    </div>
+    </div>
+    </div>
+
+
+</footer>
+<script src="/static/web/js/app.min.js?_m=1693568156"></script>
+<input type="hidden" id="g_csrf" value="hYuL1xlBxcx6EeMaiMw1aX17QPWFochils57H9ev">
+
+
+
+
+<script src="https://www.google.com/recaptcha/api.js?" async="" defer=""></script>
+
+<script type="text/javascript">
+(function(e,t,o,n,p,r,i){e.visitorGlobalObjectAlias=n;e[e.visitorGlobalObjectAlias]=e[e.visitorGlobalObjectAlias]||function(){(e[e.visitorGlobalObjectAlias].q=e[e.visitorGlobalObjectAlias].q||[]).push(arguments)};e[e.visitorGlobalObjectAlias].l=(new Date).getTime();r=t.createElement("script");r.src=o;r.async=true;i=t.getElementsByTagName("script")[0];i.parentNode.insertBefore(r,i)})(window,document,"https://diffuser-cdn.app-us1.com/diffuser/diffuser.js","vgo");
+vgo('setAccount', '799505141');
+vgo('setTrackByDefault', true);
+vgo('process');
+</script><iframe allow="join-ad-interest-group" data-tagging-id="AW-11213048316" data-load-time="1753853245022" height="0" width="0" src="https://td.doubleclick.net/td/rul/11213048316?random=1753853245003&amp;cv=11&amp;fst=1753853245003&amp;fmt=3&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;en=gtag.config&amp;gtm=45be57t0h2v9180477487za200zd9180477487&amp;gcd=13n3n3l3l5l1&amp;dma=0&amp;tag_exp=101509157~103116026~103200004~103233427~104573694~104684208~104684211~104948813~105103161~105103163~105124543~105124545~105134976~105134978&amp;u_w=1536&amp;u_h=864&amp;url=https%3A%2F%2Fncs.io%2F%3Fdisplay%3D%26page%3D1&amp;ref=https%3A%2F%2Fncs.io%2Fsearch&amp;hn=www.googleadservices.com&amp;frm=0&amp;tiba=Copyright%20free%20music%20for%20creators%20%7C%20NCS%20(NoCopyrightSounds)&amp;npa=0&amp;pscdl=noapi&amp;auid=1070261482.1753852221&amp;uaa=x86&amp;uab=64&amp;uafvl=Not)A%253BBrand%3B8.0.0.0%7CChromium%3B138.0.7204.169%7CGoogle%2520Chrome%3B138.0.7204.169&amp;uamb=0&amp;uam=&amp;uap=Windows&amp;uapv=19.0.0&amp;uaw=0&amp;fledge=1&amp;data=event%3Dgtag.config" style="display: none; visibility: hidden;"></iframe>
+
+
+
+<script type="text/javascript" id="" charset="">(function(){var a=new Date;a.setTime(a.getTime()+31536E6);a="; expires\x3d"+a.toUTCString();document.cookie="performance_consent\x3dgranted"+a+"; path\x3d/"})();</script>
+<script type="text/javascript" id="" charset="">(function(){var a=new Date;a.setTime(a.getTime()+31536E6);a="; expires\x3d"+a.toUTCString();document.cookie="targeting_consent\x3dgranted"+a+"; path\x3d/"})();</script>
+
+<script type="text/javascript" id="" charset="">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","1683691078627801");</script><iframe height="0" width="0" style="display: none; visibility: hidden;"></iframe>
+
+<script type="text/javascript" id="" charset="">fbq("track","PageView",{brand_name:"NCS"});</script><iframe allow="join-ad-interest-group" data-tagging-id="AW-393026945" data-load-time="1753853245176" height="0" width="0" src="https://td.doubleclick.net/td/rul/393026945?random=1753853245173&amp;cv=11&amp;fst=1753853245173&amp;fmt=3&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;gtm=45be57s1v9181797567z8845204938za200zb845204938zd845204938&amp;gcd=13r3r3r3r5l1&amp;dma=0&amp;tag_exp=101509157~103116026~103200004~103233427~104684208~104684211~104948813~105103161~105103163~105124543~105124545&amp;u_w=1536&amp;u_h=864&amp;url=https%3A%2F%2Fncs.io%2F%3Fdisplay%3D%26page%3D1&amp;ref=https%3A%2F%2Fncs.io%2Fsearch&amp;hn=www.googleadservices.com&amp;frm=0&amp;tiba=Copyright%20free%20music%20for%20creators%20%7C%20NCS%20(NoCopyrightSounds)&amp;npa=0&amp;pscdl=noapi&amp;auid=1070261482.1753852221&amp;uaa=x86&amp;uab=64&amp;uafvl=Not)A%253BBrand%3B8.0.0.0%7CChromium%3B138.0.7204.169%7CGoogle%2520Chrome%3B138.0.7204.169&amp;uamb=0&amp;uam=&amp;uap=Windows&amp;uapv=19.0.0&amp;uaw=0&amp;fledge=1&amp;_tu=Cg&amp;data=ads_data_redaction%3Dfalse" style="display: none; visibility: hidden;"></iframe>
+
+    <style data-type="cookiescriptstyles">
+      #cookiescript_injected {
+    background-color: #191d24;
+    z-index: 999997;
+    opacity: 1;
+    font-size: 14px;
+    font-weight: normal;
+    font-family: 'Open Sans', Arial, 'Trebuchet MS', 'Segoe UI', 'Helvetica', sans-serif;
+    box-shadow: 1px 2px 8px 0 rgba(0, 0, 0, 0.35);
+    color: #ffffff;
+    box-sizing: border-box;
+}
+.cookiescript_checkbox_label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding:0 4px;
+    line-height: 1.5;
+    margin:0;
+	text-align: left;
+}
+#cookiescript_close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 29px;
+    line-height: 13px;
+    cursor: pointer;
+    color: #ffffff;
+    height: 15px;
+    width: 15px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    letter-spacing: 0;
+    font-family: 'Trebuchet MS', 'Arial', sans-serif;
+    font-weight: 100;
+    opacity: 0.85;
+    z-index: 999999;
+}
+
+#cookiescript_buttons {
+    display: flex;
+    flex-direction: row;
+    font-weight: 700;
+}
+#cookiescript_manage_wrap {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 11px;
+    letter-spacing: 0.1px;
+    font-weight: 500;
+}
+#cookiescript_manage {
+    display: inline;
+    cursor: pointer;
+    color: #ffffff;
+    opacity:0.85;
+}
+#cookiescript_manage #cookiescript_manageicon .cookiescript_gear {
+    fill: #ffffff;
+}
+#cookiescript_manage:hover #cookiescript_manageicon .cookiescript_gear {
+    fill: #ffffff;;
+}
+
+svg#cookiescript_manageicon {
+    width: 15px;
+    height: 15px;
+    display: inline;
+    margin: 0 5px 0 0;
+    padding: 0;
+    position: relative;
+    top: 3px;
+    vertical-align: baseline;
+}
+#cookiescript_header {
+    background-color: transparent;
+    z-index: 999998;
+    color: #ffffff;
+    font-size: 17px;
+    line-height: 1.3;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    opacity:1;
+}
+.cookiescript_checkbox {
+    display: flex;
+    flex-direction: row;
+}
+input.cookiescript_checkbox_input {
+}
+span.cookiescript_checkbox_text {
+    display: inline-block;
+    font-size: 11px;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+#cookiescript_save {
+    border: 0;
+    transition: all 0.25s ease 0s;
+    background-color: #ffffff;
+    color: #191d24;
+    text-transform: uppercase;
+    font-size: 11px;
+    text-align: center;
+    line-height: 3.2;
+    letter-spacing: 0.4px;
+}
+/*IE 9 fixes*/
+@media screen and (min-width:0\0) and (min-resolution: .001dpcm) {
+    .cookiescript_checkbox_label {
+        position: relative;
+        top:-10px;
+    }
+    #cookiescript_accept, #cookiescript_reject, #cookiescript_save{
+    	display: inline-block;
+    }
+    #cookiescript_buttons{
+    	text-align:center;
+    }
+}
+#cookiescript_save{
+    display: none;
+}
+#cookiescript_reject {
+    border: 1px solid #ffffff;
+    text-align: center;
+    line-height: 3;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    color: #ffffff;
+    background: #191d24;
+}
+#cookiescript_accept {
+	transition: all 0.25s ease 0s;
+	text-transform: uppercase;
+	font-size: 11px;
+	text-align: center;
+	letter-spacing: 0.4px;
+	border: 0;
+	background-color: #ffffff;
+	color: #191d24;
+	line-height: 3.2;
+}
+
+#cookiescript_accept, #cookiescript_reject, #cookiescript_save {
+    font-weight: 500;
+    cursor: pointer;
+    white-space: nowrap;
+    transition-duration: 100ms;
+    transition-timing-function: ease-in-out;
+    min-width: 103px;
+}
+.cookiescript_bigger {
+    transform: scale(1.1);
+}
+#cookiescript_link {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 9px;
+    text-align: center;
+    font-weight: 400;
+    text-transform: uppercase;
+    opacity: 0.8;
+	display:inline !important;
+}
+
+#cookiescript_readmore,
+#cookiescript_reportlink,
+#cookiescript_cookiescriptlink {
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    margin: 0;
+    transition: all 100ms ease 0s;
+    background-color: transparent;
+    color: #ffffff;
+    display: inline;
+    font-size: 11px;
+}
+
+#cookiescript_description {
+    color: #ffffff;
+    font-size: 12px;
+    letter-spacing: 0.3px;
+    line-height: 1.7;
+    font-weight: 400;
+    opacity: 0.85;
+}
+#cookiescript_checkboxs {
+}
+#cookiescript_close:hover,
+#cookiescript_manage:hover,
+#cookiescript_link:hover
+{
+    opacity: 1;
+}
+
+#cookiescript_reject:hover {
+    background-color: #2b2f36;
+}
+
+#cookiescript_accept:hover{
+	background-color: #ececec;
+}
+#cookiescript_save:hover {
+    background-color: #ececec;
+}
+
+#cookiescript_readmore:hover,
+#cookiescript_reportlink:hover,
+#cookiescript_cookiescriptlink:hover
+{
+    color: #ffffff;
+}
+
+#cookiescript_badge {
+    position: fixed;
+    line-height: 0;
+    cursor: pointer;
+    z-index: 99999;
+    font-size: 0;
+    color: #999;
+left: 10px;
+    display: flex;
+    flex-direction: row;
+    opacity: 1;
+}
+
+#cookiescript_badgetext{
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: 'Open Sans', Arial, 'Trebuchet MS', 'Segoe UI', 'Helvetica', sans-serif;
+    overflow: hidden;
+    transition-duration: 500ms;
+    white-space: nowrap;
+    padding-right: 0;
+    color: #ffffff;
+}
+
+#cookiescript_badgesvg{
+    width:40px;
+    height: 40px;
+}
+
+
+
+#cookiescript_badge {
+bottom: 10px;
+    border-radius:25px;
+    padding:3px;
+    transition-duration: 500ms;
+    box-shadow: 1px 2px 8px 0 rgba(0, 0, 0, 0.2);
+    background: #191d24;
+}
+#cookiescript_badge:hover #cookiescript_badgetext{
+    max-width: 300px;
+    padding-right: 15px;
+    padding-left: 12px;
+}
+#cookiescript_badgetext {
+    font-size: 16px;
+    line-height: 2.5;
+    max-width: 0;
+}
+#cookiescript_badgeimage {
+    width: 40px;
+    height: 40px;
+}
+@media only screen and (max-width: 414px) {
+    #cookiescript_badgeimage {
+        width: 30px;
+        height: 30px;
+    }
+    #cookiescript_badgesvg{
+        width:30px;
+        height: 30px;
+    }
+    #cookiescript_badgetext{
+        display: none;
+    }
+}
+/*IE 9 fixes*/
+@media screen and (min-width:0\0) and (min-resolution: .001dpcm) {
+	#cookiescript_badgeimage{
+    	float:left;
+    }
+}
+
+@media print{
+    #cookiescript_injected{
+        display:none;
+    }
+}
+
+
+
+
+#cookiescript_injected_fsd {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(17, 17, 17, 0.5) !important;
+    z-index: 999996;
+	overflow-y: auto;
+}
+
+#cookiescript_fsd_wrapper {
+    max-width: 850px;
+	width: 95%;
+    margin: 0 auto 3% auto;
+	top: 10%;
+    line-height: 18px;
+    letter-spacing: normal;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+	background-color: #f3f3f3;
+    z-index: 999997;
+    opacity: 1;
+    font-size: 14px;
+    font-weight: normal;
+    font-family: 'Open Sans', Arial, 'Trebuchet MS', 'Segoe UI', 'Helvetica', sans-serif;
+    box-shadow: 1px 2px 8px 0 rgba(0, 0, 0, 0.35);
+    color: #191d24;
+    align-items: center;
+    overflow: hidden;
+    outline: none;
+    max-height: 80%;
+    box-sizing: border-box;
+	cursor: default;
+	min-height: 500px;
+}
+
+
+.cookiescript_fsd_header {
+	min-height: 57px;
+	border-bottom: 1px solid #e2e2e2;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	background-color: #ffffff;
+}
+.cookiescript_fsd_logo_a{
+	margin-left: 20px;
+}
+.cookiescript_fsd_logo{
+	height: 27px;
+	width: auto;
+	display: block;
+	max-width: 100%;
+}
+.cookiescript_fsd_language_drop_down {
+    position: absolute;
+    right: 75px;
+	top: 17px;
+}
+
+.cookiescript_fsd_main {
+    width: 100%;
+	background-color: #ffffff;
+}
+
+.cookiescript_fsd_main_info {
+    padding: 25px 50px;
+}
+
+.cookiescript_fsd_title {
+    background-color: transparent;
+    z-index: 999998;
+    color: #191d24;
+    font-size: 17px;
+    line-height: 1.3;
+    font-weight: 600;
+    opacity:1;
+}
+
+.cookiescript_fsd_description {
+    color: #191d24;
+    font-size: 13px;
+    line-height: 1.6;
+    font-weight: 400;
+    opacity: 0.85;
+	margin-top: 21px;
+}
+
+#cookiescript_fsd_wrapper #cookiescript_readmore{
+	font-size: 13px;
+	color: #191d24;
+	text-decoration: none;
+}
+#cookiescript_fsd_wrapper #cookiescript_readmore:hover{
+	text-decoration: underline;
+}
+
+.cookiescript_fsd_tabs {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+	flex-direction: row;
+    width: 100%;
+}
+
+.cookiescript_fsd_tabs > div {
+	cursor: pointer;
+	width: 50%;
+	text-transform: uppercase;
+	font-size: 14px;
+	text-align: center;
+	line-height: 1.7;
+	font-weight: bold;
+	border-top: 1px solid transparent;
+	transition: all 300ms ease 0s;
+	padding: 12px 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #ffffff;
+}
+
+.cookiescript_fsd_tabs > .cookiescript_active {
+    border-top: 1px solid #191d24;
+    background-color: #f3f3f3;
+    color: #191d24;
+}
+
+.cookiescript_fsd_tabs_content {
+    background-color: #f3f3f3;
+    padding: 5px 50px 10px 50px;
+    width: 100%;
+    overflow-y: auto;
+    box-sizing: border-box;
+	--scrollbar-width: 8px;
+	--mask-height: 35px;
+	--mask-image-content: linear-gradient( to bottom, transparent, black var(--mask-height), black calc(100% - var(--mask-height)), transparent );
+	--mask-size-content: calc(100% - var(--scrollbar-width)) 100%;
+	--mask-image-scrollbar: linear-gradient(black, black);
+	--mask-size-scrollbar: var(--scrollbar-width) 100%;
+	mask-image: var(--mask-image-content), var(--mask-image-scrollbar);
+	mask-size: var(--mask-size-content), var(--mask-size-scrollbar);
+	mask-position: 0 0, 100% 0;
+	mask-repeat: no-repeat, no-repeat;
+	-webkit-mask-image: var(--mask-image-content), var(--mask-image-scrollbar);
+	-webkit-mask-size: var(--mask-size-content), var(--mask-size-scrollbar);
+	-webkit-mask-position: 0 0, 100% 0;
+	-webkit-mask-repeat: no-repeat, no-repeat;
+}
+
+.cookiescript_fsd_tabs_content .cookiescript_hidden {
+    opacity: 0;
+    height: 0 !important;
+    overflow: hidden;
+	padding: 0 !important;
+	min-height: 0 !important;
+}
+
+.cookiescript_fsd_category {
+    border-bottom: 1px solid #e2e2e2;
+    padding-top: 23px;
+    padding-bottom: 17px;
+    display: flex;
+    flex-direction: column;
+}
+
+.cookiescript_fsd_category:last-child {
+    border-bottom: 0;
+}
+
+.cookiescript_fsd_category .cookiescript_hidden {
+    opacity: 0;
+	overflow-y: auto;
+	overflow-x: hidden;
+	padding: 0 !important;
+	max-height: 0;
+	margin: 0;
+	height: auto !important;
+		transition: max-height 300ms ease 200ms, opacity ease 200ms, margin-top 100ms ease 100ms;
+	}
+
+.cookiescript_fsd_category_main {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cookiescript_fsd_category_info {
+    flex: 5;
+    padding-right: 10px;
+}
+
+.cookiescript_fsd_category_control {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.cookiescript_fsd__category_name {
+    font-size: 14px;
+    font-weight: 600;
+	margin-bottom: 8px;
+}
+
+.cookiescript_category_description {
+	font-size: 13px;
+	padding-bottom: 5px;
+	line-height: 1.6;
+}
+
+.cookiescript_fsd_cookies {
+	border: 1px solid #e2e2e2;
+	border-radius: 5px;
+	overflow-y: auto;
+	margin-top: 15px;
+	max-height: 222px;
+		transition: max-height 300ms ease, opacity 200ms ease 300ms, margin-top 100ms ease 100ms;
+	}
+
+
+.cookiescript_fsd_cookies_control {
+    color: #191d24;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 700;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.cookiescript_fsd_cookies_control .cookiescript_hidden {
+    display: none;
+}
+
+.cookiescript_fsd_cookies_control  span{
+	margin-right: 7px;
+}
+
+.cookiescript_fsd_cookies_control svg {
+    width: 10px;
+    height: 10px;
+    font-size: 10px;
+}
+
+.cookiescript_fsd_cookies_control.active svg {
+    width: 10px;
+    height: 10px;
+    font-size: 10px;
+    transform: rotate(180deg);
+}
+
+.cookiescript_fsd_cookies_table {
+    width: 100%;
+}
+
+.cookiescript_fsd_cookies_table,
+.cookiescript_fsd_cookies_table tbody,
+.cookiescript_fsd_cookies_table thead,
+.cookiescript_fsd_cookies_table tr,
+.cookiescript_fsd_cookies_table th,
+.cookiescript_fsd_cookies_table td {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+    vertical-align: baseline;
+    background-color: #ffffff;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+
+.cookiescript_fsd_cookies_table tr:last-child td{
+    border-bottom: 0;
+}
+
+.cookiescript_fsd_cookies_table td, .cookiescript_fsd_cookies_table th {
+    white-space: normal;
+    font-size: 13px;
+    text-align: left;
+    margin: 0;
+}
+.cookiescript_fsd_cookies_table th {
+	font-weight: 600;
+	padding: 8px 8px;
+	line-height: 1.4;
+	word-break: keep-all;
+	vertical-align: middle;
+}
+
+.cookiescript_fsd_cookies_table td {
+	padding: 7px 8px;
+	line-height: 1.6;
+	vertical-align: top;
+	font-weight: 400;
+	border: 0;
+	border-top: 1px solid #e2e2e2;
+	color: #191d24;
+}
+
+.cookiescript_fsd_cookies_table th:last-child {
+    padding-right: 10px;
+}
+
+    .cookiescript_fsd_cookies_table td:nth-child(1), .cookiescript_fsd_cookies_table th:nth-child(1) {
+    padding-left: 15px;
+    word-break: normal;
+}
+
+.cookiescript_fsd_cookies_table td:nth-child(2) {
+    color: #191d24;
+}
+
+.cookiescript_fsd_cookies_table td:nth-child(3), .cookiescript_fsd_cookies_table th:nth-child(3) {
+    text-align: center;
+}
+.cookiescript_vendor_name a{
+	text-decoration: underline;
+	font-weight: bold;
+	color: #191d24;
+	line-height: normal;
+	border: 0;
+	padding: 0;
+	margin: 0;
+	background: transparent;
+	font-size: 13px;
+}
+.cookiescript_vendor_name a:hover {
+	text-decoration: underline;
+	color: #191d24;
+}
+
+.cookiescript_fsd_footer {
+    border-top: 1px solid #e2e2e2;
+    width: 100%;
+	background-color: #ffffff;
+}
+#cookiescript_fsd_wrapper #cookiescript_declarationwrap{
+		transition: opacity 200ms ease 0ms, height 0ms ease 200ms;
+	}
+#cookiescript_fsd_wrapper #cookiescript_aboutwrap{
+	font-size: 13px;
+	padding: 23px 0;
+	line-height: 1.6;
+	text-align: left;
+	font-weight: normal;
+	box-sizing: border-box;
+	transition: opacity 200ms ease 0ms;
+	overflow: auto;
+	min-height: 181px;
+}
+
+#cookiescript_setting_advertising_wrap {
+    font-size: 12px;
+}
+
+#cookiescript_iab_type {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #e2e2e2;
+    flex-wrap: wrap;
+}
+
+#cookiescript_iab_type > div {
+    cursor: pointer;
+    padding: 0 9px;
+    font-size: 11px;
+    font-weight: 600;
+    background: #f5f5f5;
+    color: #191d24;
+    line-height: 2;
+    margin: 3px 5px;
+    white-space: nowrap;
+}
+
+#cookiescript_iab_type .cookiescript_active {
+    background: #191d24;
+    color: #FEFEFE;
+}
+
+
+.cookiescript_fsd_cookies::-webkit-scrollbar-track,
+.cookiescript_fsd_tabs_content::-webkit-scrollbar-track {
+    background-color: #DADADA;
+}
+
+.cookiescript_fsd_cookies::-webkit-scrollbar,
+.cookiescript_fsd_tabs_content::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.cookiescript_fsd_cookies::-webkit-scrollbar-thumb,
+.cookiescript_fsd_tabs_content::-webkit-scrollbar-thumb {
+    background-color: #191d24;
+}
+
+
+
+@media screen and (min-width:0\0) and (min-resolution: .001dpcm) {
+    #cookiescript_iab_type > div{
+        display:inline-block;
+    }
+}
+
+/* --- OVERRIDE ----*/
+
+#cookiescript_injected_fsd #cookiescript_close {
+	top: 18px;
+	font-size: 37px;
+	right: 25px;
+	color: #191d24;
+	height: 18px;
+	width: 18px;
+}
+
+#cookiescript_injected_fsd #cookiescript_buttons {
+    justify-content: flex-start;
+    padding: 5px 15px;
+}
+
+#cookiescript_injected_fsd #cookiescript_accept, #cookiescript_injected_fsd #cookiescript_save, #cookiescript_injected_fsd #cookiescript_reject {
+		flex-grow: unset;
+		padding: 0px 25px;
+	margin: 10px 5px;
+	font-size: 13px;
+	border-radius: 30px;
+	line-height: 3;
+}
+#cookiescript_injected_fsd #cookiescript_buttons{
+	flex-direction: row;
+}
+#cookiescript_injected_fsd #cookiescript_buttons #cookiescript_reject {
+    margin-right: auto;
+}
+
+#cookiescript_injected_fsd .cookiescript-iab-itemContainer {
+    border: 1px solid #e2e2e2;
+	background-color: #ffffff;
+	padding: 10px;
+}
+
+#cookiescript_injected_fsd .cookiescript-iab-header,
+#cookiescript_injected_fsd .cookiescript-iab-itemHeader,
+#cookiescript_injected_fsd .cookiescript-iab-itemHeaderAction {
+    color: #191d24;
+}
+
+#cookiescript_injected_fsd .cookiescript-iab-itemHeaderAction {
+    border-color: #191d24;;
+}
+
+#cookiescript_injected_fsd #cookiescript_accept {
+    background-color: #ffffff;
+    color: #191d24;
+    border: 1px solid #191d24;
+    order: 1}
+
+#cookiescript_injected_fsd #cookiescript_accept:hover {
+    background-color: #ececec;
+}
+
+#cookiescript_injected_fsd #cookiescript_reject {
+    background-color: #191d24;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    order: 2}
+
+#cookiescript_injected_fsd #cookiescript_reject:hover {
+    background-color: #2b2f36;
+}
+
+#cookiescript_injected_fsd #cookiescript_save {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #191d24;
+    border: 1px solid #191d24;
+    order: 3}
+
+#cookiescript_injected_fsd #cookiescript_save:hover {
+    background-color: #ececec;
+}
+
+/*Switches color reload*/
+#cookiescript_injected_fsd .mdc-switch.mdc-switch--selected:enabled .mdc-switch__handle::after {
+    background: #191d24;
+}
+
+#cookiescript_injected_fsd .mdc-switch.mdc-switch--selected:enabled:hover:not(:focus):not(:active) .mdc-switch__handle::after {
+    background: #20242b;
+}
+
+#cookiescript_injected_fsd .mdc-switch.mdc-switch--selected:enabled:focus:not(:active) .mdc-switch__handle::after {
+    background: #20242b;
+}
+
+#cookiescript_injected_fsd .mdc-switch.mdc-switch--selected:enabled:active .mdc-switch__handle::after {
+    background: #20242b;
+}
+
+#cookiescript_injected_fsd .mdc-switch.mdc-switch--selected:enabled:hover:not(:focus) .mdc-switch__ripple::before,
+#cookiescript_injected_fsd .mdc-switch.mdc-switch--selected:enabled:hover:not(:focus) .mdc-switch__ripple::after{
+    background: #191d24;
+}
+
+#cookiescript_injected_fsd .mdc-switch.mdc-switch--selected:enabled:focus .mdc-switch__ripple::before,
+#cookiescript_injected_fsd .mdc-switch.mdc-switch--selected:enabled:focus .mdc-switch__ripple::after {
+    background: #191d24;
+}
+
+#cookiescript_injected_fsd .mdc-switch.mdc-switch--selected:enabled:active .mdc-switch__ripple::before,
+#cookiescript_injected_fsd .mdc-switch.mdc-switch--selected:enabled:active .mdc-switch__ripple::after {
+    background: #191d24;
+}
+
+#cookiescript_injected_fsd .mdc-switch:enabled .mdc-switch__track::after {
+    background: #191d24;
+    opacity: 0.3;
+}
+
+#cookiescript_injected_fsd .mdc-switch:enabled:hover:not(:focus):not(:active) .mdc-switch__track::after {
+    background: #191d24;
+    opacity: 0.3;
+}
+
+#cookiescript_injected_fsd .mdc-switch:enabled:focus:not(:active) .mdc-switch__track::after {
+    background: #191d24;
+    opacity: 0.3;
+}
+
+#cookiescript_injected_fsd .mdc-switch:enabled:active .mdc-switch__track::after {
+    background: #191d24;
+    opacity: 0.3;
+}
+
+
+#cookiescript_fsd_wrapper {
+    border-radius: 8px;
+}
+
+#cookiescript_iab_type > div {
+    border-radius: 8px;
+}
+.cookiescript_fsd_cookies::-webkit-scrollbar-track,
+.cookiescript_fsd_tabs_content::-webkit-scrollbar-track
+#cookiescript_iabwrap::-webkit-scrollbar-thumb,
+#cookiescript_aboutwrap::-webkit-scrollbar-thumb{
+    border-radius: 6px;
+}
+.cookiescript_fsd_cookies::-webkit-scrollbar-thumb,
+.cookiescript_fsd_tabs_content::-webkit-scrollbar-thumb,
+#cookiescript_iabwrap::-webkit-scrollbar-thumb,
+#cookiescript_aboutwrap::-webkit-scrollbar-thumb{
+    border-radius: 5px;
+}
+
+@media only screen and (max-width: 414px) {
+	#cookiescript_fsd_wrapper {
+		width: 100%;
+		height: 100%;
+		max-height: 100%;
+		top: 0;
+		border-radius: 0;
+		margin: 0;
+	}
+
+	.cookiescript_fsd_main_info {
+		padding: 13px 20px;
+		overflow-y: auto;
+		max-height: 140px;
+	}
+	.cookiescript_fsd_description{
+		margin-top: 8px;
+	}
+	.cookiescript_fsd_tabs > div {
+		padding: 6px;
+		font-size: 12px;
+	}
+
+	.cookiescript_fsd_tabs_content {
+		padding: 5px 20px 10px 20px;
+	}
+
+	.cookiescript_fsd_cookies_table thead {
+		display: none;
+	}
+
+	.cookiescript_fsd_cookies_table td {
+		display: flex;
+		border-bottom: 0px;
+	}
+
+	.cookiescript_fsd_cookies_table tr td:last-child {
+		border-bottom: 0;
+	}
+
+	.cookiescript_fsd_cookies_table td {
+		border-top: 0;
+	}
+
+	.cookiescript_fsd_cookies_table td::before {
+		content: attr(label);
+		font-weight: bold;
+		width: 120px;
+		min-width: 120px;
+		text-align: left;
+	}
+
+	.cookiescript_fsd_cookies_table td:nth-child(2):before {
+		color: #191d24;
+	}
+
+	.cookiescript_category_description {
+		text-align: left;
+	}
+
+	.cookiescript_fsd_cookies_table td:nth-child(1),
+	.cookiescript_fsd_cookies_table th:nth-child(1) {
+		padding-left: 7px;
+		font-weight: bold;
+		border-top: 1px solid #e2e2e2;
+	}
+
+	.cookiescript_fsd_cookies_table tr:nth-child(1) td:nth-child(1),
+	.cookiescript_fsd_cookies_table tr:nth-child(1) th:nth-child(1) {
+		border-top: 0px;
+	}
+
+	.cookiescript_fsd_cookies_table td:last-child {
+		border-bottom: none;
+	}
+
+	.cookiescript_fsd_cookies_table tr:nth-child(even) {
+		background: #f5f5f5;
+	}
+
+	.cookiescript_fsd_cookies_table tr:nth-child(even) td {
+		border-bottom: 0px solid #FFF;
+	}
+
+	#cookiescript_injected_fsd #cookiescript_buttons {
+		margin-bottom: 0;
+	}
+
+	#cookiescript_injected_fsd #cookiescript_buttons #cookiescript_accept,
+	#cookiescript_injected_fsd #cookiescript_buttons #cookiescript_save,
+	#cookiescript_injected_fsd #cookiescript_buttons #cookiescript_reject {
+		flex-grow: 1;
+		margin-left: 10px;
+		margin-right: 10px;
+		margin-top: 5px;
+		margin-bottom: 5px;
+		padding: 0 15px;
+	}
+
+	.cookiescript_fsd_language_drop_down {
+		right: 40px;
+	}
+
+	#cookiescript_injected_fsd #cookiescript_close{
+		right:14px;
+	}
+	
+
+}
+
+
+
+
+.cookiescript_rtl {
+    direction:rtl;
+}
+
+
+/*Start Checkboxes*/
+#cookiescript_injected_fsd .mdc-checkbox,
+#cookiescript_injected .mdc-checkbox {
+    box-sizing: content-box !important;
+}
+#cookiescript_injected_fsd .mdc-checkbox__native-control,
+#cookiescript_injected .mdc-checkbox__native-control {
+    display: block;
+    z-index: 1;
+}
+#cookiescript_injected_fsd .mdc-checkbox .mdc-checkbox__native-control:focus~.mdc-checkbox__background::before, 
+#cookiescript_injected .mdc-checkbox .mdc-checkbox__native-control:focus~.mdc-checkbox__background::before, 
+#cookiescript_injected_fsd .mdc-checkbox .mdc-checkbox__native-control:indeterminate~.mdc-checkbox__background::before,
+#cookiescript_injected .mdc-checkbox .mdc-checkbox__native-control:indeterminate~.mdc-checkbox__background::before {
+    background-color: #FFFFFF;
+}
+
+#cookiescript_injected .mdc-checkbox,#cookiescript_injected_fsd .mdc-checkbox{display:inline-block;position:relative;flex:0 0 18px;box-sizing:content-box;width:18px;height:18px;line-height:0;white-space:nowrap;cursor:pointer;vertical-align:bottom;padding:11px}#cookiescript_injected .mdc-checkbox .mdc-checkbox__native-control:checked~.mdc-checkbox__background::before,#cookiescript_injected .mdc-checkbox .mdc-checkbox__native-control:indeterminate~.mdc-checkbox__background::before,#cookiescript_injected_fsd .mdc-checkbox .mdc-checkbox__native-control:checked~.mdc-checkbox__background::before,#cookiescript_injected_fsd .mdc-checkbox .mdc-checkbox__native-control:indeterminate~.mdc-checkbox__background::before{background-color:#ffffff}@supports not (-ms-ime-align:auto){#cookiescript_injected .mdc-checkbox .mdc-checkbox__native-control:checked~.mdc-checkbox__background::before,#cookiescript_injected .mdc-checkbox .mdc-checkbox__native-control:indeterminate~.mdc-checkbox__background::before,#cookiescript_injected_fsd .mdc-checkbox .mdc-checkbox__native-control:checked~.mdc-checkbox__background::before,#cookiescript_injected_fsd .mdc-checkbox .mdc-checkbox__native-control:indeterminate~.mdc-checkbox__background::before{background-color:var(--mdc-theme-secondary, #ffffff)}}#cookiescript_injected .mdc-checkbox .mdc-checkbox__background,#cookiescript_injected_fsd .mdc-checkbox .mdc-checkbox__background{top:11px;left:11px}#cookiescript_injected .mdc-checkbox .mdc-checkbox__background::before,#cookiescript_injected_fsd .mdc-checkbox .mdc-checkbox__background::before{top:-13px;left:-13px;width:40px;height:40px}#cookiescript_injected .mdc-checkbox .mdc-checkbox__native-control,#cookiescript_injected_fsd .mdc-checkbox .mdc-checkbox__native-control{top:0;right:0;left:0;width:40px;height:40px}#cookiescript_injected .mdc-checkbox__native-control:enabled:not(:checked):not(:indeterminate)~.mdc-checkbox__background,#cookiescript_injected_fsd .mdc-checkbox__native-control:enabled:not(:checked):not(:indeterminate)~.mdc-checkbox__background{border-color:#ffffff;background-color:transparent}#cookiescript_injected .mdc-checkbox__native-control:enabled:checked~.mdc-checkbox__background,#cookiescript_injected .mdc-checkbox__native-control:enabled:indeterminate~.mdc-checkbox__background,#cookiescript_injected_fsd .mdc-checkbox__native-control:enabled:checked~.mdc-checkbox__background,#cookiescript_injected_fsd .mdc-checkbox__native-control:enabled:indeterminate~.mdc-checkbox__background{border-color:#ffffff;background-color:#ffffff}#cookiescript_injected .mdc-checkbox__native-control[disabled]:not(:checked):not(:indeterminate)~.mdc-checkbox__background,#cookiescript_injected_fsd .mdc-checkbox__native-control[disabled]:not(:checked):not(:indeterminate)~.mdc-checkbox__background{border-color:rgba(255,255,255,0.26);background-color:transparent}#cookiescript_injected .mdc-checkbox__native-control[disabled]:checked~.mdc-checkbox__background,#cookiescript_injected .mdc-checkbox__native-control[disabled]:indeterminate~.mdc-checkbox__background,#cookiescript_injected_fsd .mdc-checkbox__native-control[disabled]:checked~.mdc-checkbox__background,#cookiescript_injected_fsd .mdc-checkbox__native-control[disabled]:indeterminate~.mdc-checkbox__background{border-color:transparent;background-color:rgba(255,255,255,0.26)}#cookiescript_injected .mdc-checkbox__native-control:enabled~.mdc-checkbox__background .mdc-checkbox__checkmark,#cookiescript_injected_fsd .mdc-checkbox__native-control:enabled~.mdc-checkbox__background .mdc-checkbox__checkmark{color:#191d24}#cookiescript_injected .mdc-checkbox__native-control:disabled~.mdc-checkbox__background .mdc-checkbox__checkmark,#cookiescript_injected_fsd .mdc-checkbox__native-control:disabled~.mdc-checkbox__background .mdc-checkbox__checkmark{color:#191d24}#cookiescript_injected .mdc-checkbox__background,#cookiescript_injected_fsd .mdc-checkbox__background{display:inline-flex;position:absolute;align-items:center;justify-content:center;box-sizing:border-box;width:18px;height:18px;border:2px solid #ffffff;border-radius:2px;background-color:transparent;pointer-events:none;will-change:background-color,border-color;transition:background-color 90ms 0s cubic-bezier(.4,0,.6,1),border-color 90ms 0s cubic-bezier(.4,0,.6,1)}#cookiescript_injected .mdc-checkbox__background .mdc-checkbox__background::before,#cookiescript_injected_fsd .mdc-checkbox__background .mdc-checkbox__background::before{background-color:#000}@supports not (-ms-ime-align:auto){#cookiescript_injected .mdc-checkbox__checkmark,#cookiescript_injected_fsd .mdc-checkbox__checkmark{position:absolute;top:0;right:0;bottom:0;left:0;width:100%;opacity:0;transition:opacity 180ms 0s cubic-bezier(.4,0,.6,1)}#cookiescript_injected .mdc-checkbox__checkmark-path,#cookiescript_injected_fsd .mdc-checkbox__checkmark-path{transition:stroke-dashoffset 180ms 0s cubic-bezier(.4,0,.6,1);stroke:currentColor;stroke-width:3.12px;stroke-dashoffset:29.7833385;stroke-dasharray:29.7833385}#cookiescript_injected .mdc-checkbox__native-control:checked~.mdc-checkbox__background,#cookiescript_injected .mdc-checkbox__native-control:indeterminate~.mdc-checkbox__background,#cookiescript_injected_fsd .mdc-checkbox__native-control:checked~.mdc-checkbox__background,#cookiescript_injected_fsd .mdc-checkbox__native-control:indeterminate~.mdc-checkbox__background{transition:border-color 90ms 0s cubic-bezier(0,0,.2,1),background-color 90ms 0s cubic-bezier(0,0,.2,1)}#cookiescript_injected .mdc-checkbox__native-control:checked~.mdc-checkbox__background .mdc-checkbox__checkmark-path,#cookiescript_injected .mdc-checkbox__native-control:indeterminate~.mdc-checkbox__background .mdc-checkbox__checkmark-path,#cookiescript_injected_fsd .mdc-checkbox__native-control:checked~.mdc-checkbox__background .mdc-checkbox__checkmark-path,#cookiescript_injected_fsd .mdc-checkbox__native-control:indeterminate~.mdc-checkbox__background .mdc-checkbox__checkmark-path{stroke-dashoffset:0}#cookiescript_injected .mdc-checkbox__background::before,#cookiescript_injected_fsd .mdc-checkbox__background::before{position:absolute;-webkit-transform:scale(0,0);transform:scale(0,0);border-radius:50%;opacity:0;pointer-events:none;content:"";will-change:opacity,transform;transition:opacity 90ms 0s cubic-bezier(.4,0,.6,1),-webkit-transform 90ms 0s cubic-bezier(.4,0,.6,1);transition:opacity 90ms 0s cubic-bezier(.4,0,.6,1),transform 90ms 0s cubic-bezier(.4,0,.6,1);transition:opacity 90ms 0s cubic-bezier(.4,0,.6,1),transform 90ms 0s cubic-bezier(.4,0,.6,1),-webkit-transform 90ms 0s cubic-bezier(.4,0,.6,1)}#cookiescript_injected .mdc-checkbox__native-control:focus~.mdc-checkbox__background::before,#cookiescript_injected_fsd .mdc-checkbox__native-control:focus~.mdc-checkbox__background::before{-webkit-transform:scale(1);transform:scale(1);opacity:.12;transition:opacity 80ms 0s cubic-bezier(0,0,.2,1),-webkit-transform 80ms 0s cubic-bezier(0,0,.2,1);transition:opacity 80ms 0s cubic-bezier(0,0,.2,1),transform 80ms 0s cubic-bezier(0,0,.2,1);transition:opacity 80ms 0s cubic-bezier(0,0,.2,1),transform 80ms 0s cubic-bezier(0,0,.2,1),-webkit-transform 80ms 0s cubic-bezier(0,0,.2,1)}#cookiescript_injected .mdc-checkbox__native-control,#cookiescript_injected_fsd .mdc-checkbox__native-control{position:absolute;margin:0;padding:0;opacity:0;cursor:inherit}#cookiescript_injected .mdc-checkbox__native-control:disabled,#cookiescript_injected_fsd .mdc-checkbox__native-control:disabled{cursor:default;pointer-events:none}#cookiescript_injected .mdc-checkbox__native-control:checked~.mdc-checkbox__background .mdc-checkbox__checkmark,#cookiescript_injected_fsd .mdc-checkbox__native-control:checked~.mdc-checkbox__background .mdc-checkbox__checkmark{transition:opacity 180ms 0s cubic-bezier(0,0,.2,1),-webkit-transform 180ms 0s cubic-bezier(0,0,.2,1);transition:opacity 180ms 0s cubic-bezier(0,0,.2,1),transform 180ms 0s cubic-bezier(0,0,.2,1);transition:opacity 180ms 0s cubic-bezier(0,0,.2,1),transform 180ms 0s cubic-bezier(0,0,.2,1),-webkit-transform 180ms 0s cubic-bezier(0,0,.2,1);opacity:1}#cookiescript_injected .mdc-checkbox__native-control:indeterminate~.mdc-checkbox__background .mdc-checkbox__checkmark,#cookiescript_injected_fsd .mdc-checkbox__native-control:indeterminate~.mdc-checkbox__background .mdc-checkbox__checkmark{-webkit-transform:rotate(45deg);transform:rotate(45deg);opacity:0;transition:opacity 90ms 0s cubic-bezier(.4,0,.6,1),-webkit-transform 90ms 0s cubic-bezier(.4,0,.6,1);transition:opacity 90ms 0s cubic-bezier(.4,0,.6,1),transform 90ms 0s cubic-bezier(.4,0,.6,1);transition:opacity 90ms 0s cubic-bezier(.4,0,.6,1),transform 90ms 0s cubic-bezier(.4,0,.6,1),-webkit-transform 90ms 0s cubic-bezier(.4,0,.6,1)}#cookiescript_injected .mdc-checkbox,#cookiescript_injected_fsd .mdc-checkbox{-webkit-tap-highlight-color:transparent}}
+/*End Checkboxes*/
+
+
+/*Start Toggle*/
+
+#cookiescript_injected .mdc-elevation-overlay,#cookiescript_injected_fsd .mdc-elevation-overlay{position:absolute;border-radius:inherit;pointer-events:none;opacity:0;transition:opacity 280ms cubic-bezier(.4,0,.2,1);background-color:#fff}#cookiescript_injected .mdc-switch,#cookiescript_injected_fsd .mdc-switch{align-items:center;background:0 0;border:none;cursor:pointer;display:inline-flex;flex-shrink:0;margin:0;outline:0;overflow:visible;padding:0;position:relative}#cookiescript_injected .mdc-switch:disabled,#cookiescript_injected_fsd .mdc-switch:disabled{cursor:default;pointer-events:none}#cookiescript_injected .mdc-switch input[type=checkbox],#cookiescript_injected_fsd .mdc-switch input[type=checkbox]{display:none;visibility:hidden}#cookiescript_injected .mdc-switch__track,#cookiescript_injected_fsd .mdc-switch__track{overflow:hidden;position:relative;width:100%}#cookiescript_injected .mdc-switch__track::after,#cookiescript_injected .mdc-switch__track::before,#cookiescript_injected_fsd .mdc-switch__track::after,#cookiescript_injected_fsd .mdc-switch__track::before{border:1px solid transparent;border-radius:inherit;box-sizing:border-box;content:"";height:100%;left:0;position:absolute;width:100%}#cookiescript_injected .mdc-switch__track::before,#cookiescript_injected_fsd .mdc-switch__track::before{transition:-webkit-transform 75ms 0s cubic-bezier(0,0,.2,1);transition:transform 75ms 0s cubic-bezier(0,0,.2,1);-webkit-transform:translateX(0);transform:translateX(0)}#cookiescript_injected .mdc-switch__track::after,#cookiescript_injected_fsd .mdc-switch__track::after{transition:-webkit-transform 75ms 0s cubic-bezier(.4,0,.6,1);transition:transform 75ms 0s cubic-bezier(.4,0,.6,1);-webkit-transform:translateX(-100%);transform:translateX(-100%)}#cookiescript_injected .mdc-switch__track[dir=rtl]::after,#cookiescript_injected [dir=rtl] .mdc-switch__track::after,#cookiescript_injected_fsd .mdc-switch__track[dir=rtl]::after,#cookiescript_injected_fsd [dir=rtl] .mdc-switch__track::after{-webkit-transform:translateX(100%);transform:translateX(100%)}#cookiescript_injected .mdc-switch--selected .mdc-switch__track::before,#cookiescript_injected_fsd .mdc-switch--selected .mdc-switch__track::before{transition:-webkit-transform 75ms 0s cubic-bezier(.4,0,.6,1);transition:transform 75ms 0s cubic-bezier(.4,0,.6,1);-webkit-transform:translateX(100%);transform:translateX(100%)}#cookiescript_injected .mdc-switch--selected .mdc-switch__track[dir=rtl]::before,#cookiescript_injected [dir=rtl] .mdc-switch--selected .mdc-switch__track::before,#cookiescript_injected_fsd .mdc-switch--selected .mdc-switch__track[dir=rtl]::before,#cookiescript_injected_fsd [dir=rtl] .mdc-switch--selected .mdc-switch__track::before{-webkit-transform:translateX(-100%);transform:translateX(-100%)}#cookiescript_injected .mdc-switch--selected .mdc-switch__track::after,#cookiescript_injected_fsd .mdc-switch--selected .mdc-switch__track::after{transition:-webkit-transform 75ms 0s cubic-bezier(0,0,.2,1);transition:transform 75ms 0s cubic-bezier(0,0,.2,1);-webkit-transform:translateX(0);transform:translateX(0)}#cookiescript_injected .mdc-switch__handle-track,#cookiescript_injected_fsd .mdc-switch__handle-track{height:100%;pointer-events:none;position:absolute;top:0;transition:-webkit-transform 75ms 0s cubic-bezier(.4,0,.2,1);transition:transform 75ms 0s cubic-bezier(.4,0,.2,1);left:0;right:auto;-webkit-transform:translateX(0);transform:translateX(0)}#cookiescript_injected .mdc-switch__handle-track[dir=rtl],#cookiescript_injected [dir=rtl] .mdc-switch__handle-track,#cookiescript_injected_fsd .mdc-switch__handle-track[dir=rtl],#cookiescript_injected_fsd [dir=rtl] .mdc-switch__handle-track{left:auto;right:0}#cookiescript_injected .mdc-switch--selected .mdc-switch__handle-track,#cookiescript_injected_fsd .mdc-switch--selected .mdc-switch__handle-track{-webkit-transform:translateX(100%);transform:translateX(100%)}#cookiescript_injected .mdc-switch--selected .mdc-switch__handle-track[dir=rtl],#cookiescript_injected [dir=rtl] .mdc-switch--selected .mdc-switch__handle-track,#cookiescript_injected_fsd .mdc-switch--selected .mdc-switch__handle-track[dir=rtl],#cookiescript_injected_fsd [dir=rtl] .mdc-switch--selected .mdc-switch__handle-track{-webkit-transform:translateX(-100%);transform:translateX(-100%)}#cookiescript_injected .mdc-switch__handle,#cookiescript_injected_fsd .mdc-switch__handle{display:flex;pointer-events:auto;position:absolute;top:50%;-webkit-transform:translateY(-50%);transform:translateY(-50%);left:0;right:auto}#cookiescript_injected .mdc-switch__handle[dir=rtl],#cookiescript_injected [dir=rtl] .mdc-switch__handle,#cookiescript_injected_fsd .mdc-switch__handle[dir=rtl],#cookiescript_injected_fsd [dir=rtl] .mdc-switch__handle{left:auto;right:0}#cookiescript_injected .mdc-switch__handle::after,#cookiescript_injected .mdc-switch__handle::before,#cookiescript_injected_fsd .mdc-switch__handle::after,#cookiescript_injected_fsd .mdc-switch__handle::before{border:1px solid transparent;border-radius:inherit;box-sizing:border-box;content:"";width:100%;height:100%;left:0;position:absolute;top:0;transition:background-color 75ms 0s cubic-bezier(.4,0,.2,1),border-color 75ms 0s cubic-bezier(.4,0,.2,1);z-index:-1}#cookiescript_injected .mdc-switch__shadow,#cookiescript_injected_fsd .mdc-switch__shadow{border-radius:inherit;bottom:0;left:0;position:absolute;right:0;top:0}#cookiescript_injected .mdc-elevation-overlay,#cookiescript_injected_fsd .mdc-elevation-overlay{bottom:0;left:0;right:0;top:0}#cookiescript_injected .mdc-switch__ripple,#cookiescript_injected_fsd .mdc-switch__ripple{left:50%;position:absolute;top:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);z-index:-1}#cookiescript_injected .mdc-switch:disabled .mdc-switch__ripple,#cookiescript_injected_fsd .mdc-switch:disabled .mdc-switch__ripple{display:none}#cookiescript_injected .mdc-switch__icons,#cookiescript_injected_fsd .mdc-switch__icons{height:100%;position:relative;width:100%;z-index:1}#cookiescript_injected .mdc-switch__icon,#cookiescript_injected_fsd .mdc-switch__icon{bottom:0;left:0;margin:auto;position:absolute;right:0;top:0;opacity:0;transition:opacity 30ms 0s cubic-bezier(.4,0,1,1)}#cookiescript_injected .mdc-switch--selected .mdc-switch__icon--on,#cookiescript_injected .mdc-switch--unselected .mdc-switch__icon--off,#cookiescript_injected_fsd .mdc-switch--selected .mdc-switch__icon--on,#cookiescript_injected_fsd .mdc-switch--unselected .mdc-switch__icon--off{opacity:1;transition:opacity 45ms 30ms cubic-bezier(0,0,.2,1)}#cookiescript_injected .mdc-switch,#cookiescript_injected_fsd .mdc-switch{will-change:transform,opacity}@-webkit-keyframes mdc-ripple-fg-radius-in{from{-webkit-animation-timing-function:cubic-bezier(.4,0,.2,1);animation-timing-function:cubic-bezier(.4,0,.2,1);-webkit-transform:translate(0) scale(1);transform:translate(0) scale(1)}to{-webkit-transform:translate(0) scale(1);transform:translate(0) scale(1)}}@keyframes mdc-ripple-fg-radius-in{from{-webkit-animation-timing-function:cubic-bezier(.4,0,.2,1);animation-timing-function:cubic-bezier(.4,0,.2,1);-webkit-transform:translate(0) scale(1);transform:translate(0) scale(1)}to{-webkit-transform:translate(0) scale(1);transform:translate(0) scale(1)}}@-webkit-keyframes mdc-ripple-fg-opacity-in{from{-webkit-animation-timing-function:linear;animation-timing-function:linear;opacity:0}to{opacity:.1}}@keyframes mdc-ripple-fg-opacity-in{from{-webkit-animation-timing-function:linear;animation-timing-function:linear;opacity:0}to{opacity:.1}}@-webkit-keyframes mdc-ripple-fg-opacity-out{from{-webkit-animation-timing-function:linear;animation-timing-function:linear;opacity:.1}to{opacity:0}}@keyframes mdc-ripple-fg-opacity-out{from{-webkit-animation-timing-function:linear;animation-timing-function:linear;opacity:.1}to{opacity:0}}#cookiescript_injected .mdc-switch .mdc-switch__ripple::after,#cookiescript_injected .mdc-switch .mdc-switch__ripple::before,#cookiescript_injected_fsd .mdc-switch .mdc-switch__ripple::after,#cookiescript_injected_fsd .mdc-switch .mdc-switch__ripple::before{position:absolute;border-radius:50%;opacity:0;pointer-events:none;content:""}#cookiescript_injected .mdc-switch .mdc-switch__ripple::before,#cookiescript_injected_fsd .mdc-switch .mdc-switch__ripple::before{transition:opacity 15ms linear,background-color 15ms linear;z-index:1}#cookiescript_injected .mdc-switch .mdc-switch__ripple::after,#cookiescript_injected_fsd .mdc-switch .mdc-switch__ripple::after{z-index:0}#cookiescript_injected .mdc-switch.mdc-ripple-upgraded .mdc-switch__ripple::before,#cookiescript_injected_fsd .mdc-switch.mdc-ripple-upgraded .mdc-switch__ripple::before{-webkit-transform:scale(1);transform:scale(1)}#cookiescript_injected .mdc-switch.mdc-ripple-upgraded .mdc-switch__ripple::after,#cookiescript_injected_fsd .mdc-switch.mdc-ripple-upgraded .mdc-switch__ripple::after{top:0;left:0;-webkit-transform:scale(0);transform:scale(0);-webkit-transform-origin:center center;transform-origin:center center}#cookiescript_injected .mdc-switch.mdc-ripple-upgraded--unbounded .mdc-switch__ripple::after,#cookiescript_injected_fsd .mdc-switch.mdc-ripple-upgraded--unbounded .mdc-switch__ripple::after{top:0;left:0}#cookiescript_injected .mdc-switch.mdc-ripple-upgraded--foreground-activation .mdc-switch__ripple::after,#cookiescript_injected_fsd .mdc-switch.mdc-ripple-upgraded--foreground-activation .mdc-switch__ripple::after{-webkit-animation:mdc-ripple-fg-radius-in 225ms forwards,mdc-ripple-fg-opacity-in 75ms forwards;animation:mdc-ripple-fg-radius-in 225ms forwards,mdc-ripple-fg-opacity-in 75ms forwards}#cookiescript_injected .mdc-switch.mdc-ripple-upgraded--foreground-deactivation .mdc-switch__ripple::after,#cookiescript_injected_fsd .mdc-switch.mdc-ripple-upgraded--foreground-deactivation .mdc-switch__ripple::after{-webkit-animation:mdc-ripple-fg-opacity-out 150ms;animation:mdc-ripple-fg-opacity-out 150ms;-webkit-transform:translate(0) scale(1);transform:translate(0) scale(1)}#cookiescript_injected .mdc-switch .mdc-switch__ripple::after,#cookiescript_injected .mdc-switch .mdc-switch__ripple::before,#cookiescript_injected_fsd .mdc-switch .mdc-switch__ripple::after,#cookiescript_injected_fsd .mdc-switch .mdc-switch__ripple::before{top:calc(50% - 50%);left:calc(50% - 50%);width:100%;height:100%}#cookiescript_injected .mdc-switch.mdc-ripple-upgraded .mdc-switch__ripple::after,#cookiescript_injected .mdc-switch.mdc-ripple-upgraded .mdc-switch__ripple::before,#cookiescript_injected_fsd .mdc-switch.mdc-ripple-upgraded .mdc-switch__ripple::after,#cookiescript_injected_fsd .mdc-switch.mdc-ripple-upgraded .mdc-switch__ripple::before{top:0;left:0;width:0;height:0}#cookiescript_injected .mdc-switch.mdc-ripple-upgraded .mdc-switch__ripple::after,#cookiescript_injected_fsd .mdc-switch.mdc-ripple-upgraded .mdc-switch__ripple::after{width:0;height:0}#cookiescript_injected .mdc-switch,#cookiescript_injected_fsd .mdc-switch{width:36px}#cookiescript_injected .mdc-switch.mdc-switch--selected:enabled .mdc-switch__handle::after{background:}#cookiescript_injected .mdc-switch.mdc-switch--selected:enabled:hover:not(:focus):not(:active) .mdc-switch__handle::after{background:}#cookiescript_injected .mdc-switch.mdc-switch--selected:enabled:focus:not(:active) .mdc-switch__handle::after{background:}#cookiescript_injected .mdc-switch.mdc-switch--selected:enabled:active .mdc-switch__handle::after{background:}#cookiescript_injected .mdc-switch.mdc-switch--selected:disabled .mdc-switch__handle::after,#cookiescript_injected_fsd .mdc-switch.mdc-switch--selected:disabled .mdc-switch__handle::after{background:#424242}#cookiescript_injected .mdc-switch.mdc-switch--unselected:enabled .mdc-switch__handle::after,#cookiescript_injected_fsd .mdc-switch.mdc-switch--unselected:enabled .mdc-switch__handle::after{background:#616161}#cookiescript_injected .mdc-switch.mdc-switch--unselected:enabled:hover:not(:focus):not(:active) .mdc-switch__handle::after,#cookiescript_injected_fsd .mdc-switch.mdc-switch--unselected:enabled:hover:not(:focus):not(:active) .mdc-switch__handle::after{background:#212121}#cookiescript_injected .mdc-switch.mdc-switch--unselected:enabled:focus:not(:active) .mdc-switch__handle::after,#cookiescript_injected_fsd .mdc-switch.mdc-switch--unselected:enabled:focus:not(:active) .mdc-switch__handle::after{background:#212121}#cookiescript_injected .mdc-switch.mdc-switch--unselected:enabled:active .mdc-switch__handle::after,#cookiescript_injected_fsd .mdc-switch.mdc-switch--unselected:enabled:active .mdc-switch__handle::after{background:#212121}#cookiescript_injected .mdc-switch.mdc-switch--unselected:disabled .mdc-switch__handle::after,#cookiescript_injected_fsd .mdc-switch.mdc-switch--unselected:disabled .mdc-switch__handle::after{background:#424242}#cookiescript_injected .mdc-switch .mdc-switch__handle::before,#cookiescript_injected_fsd .mdc-switch .mdc-switch__handle::before{background:#fff}#cookiescript_injected .mdc-switch:enabled .mdc-switch__shadow,#cookiescript_injected_fsd .mdc-switch:enabled .mdc-switch__shadow{box-shadow:0 2px 1px -1px rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 1px 3px 0 rgba(0,0,0,.12);--mdc-elevation-box-shadow-for-gss:0px 2px 1px -1px rgba(0, 0, 0, 0.2),0px 1px 1px 0px rgba(0, 0, 0, 0.14),0px 1px 3px 0px rgba(0, 0, 0, 0.12)}#cookiescript_injected .mdc-switch:disabled .mdc-switch__shadow,#cookiescript_injected_fsd .mdc-switch:disabled .mdc-switch__shadow{box-shadow:0 0 0 0 rgba(0,0,0,.2),0 0 0 0 rgba(0,0,0,.14),0 0 0 0 rgba(0,0,0,.12);--mdc-elevation-box-shadow-for-gss:0px 0px 0px 0px rgba(0, 0, 0, 0.2),0px 0px 0px 0px rgba(0, 0, 0, 0.14),0px 0px 0px 0px rgba(0, 0, 0, 0.12)}#cookiescript_injected .mdc-switch .mdc-switch__handle,#cookiescript_injected_fsd .mdc-switch .mdc-switch__handle{height:20px}#cookiescript_injected .mdc-switch:disabled .mdc-switch__handle::after,#cookiescript_injected_fsd .mdc-switch:disabled .mdc-switch__handle::after{opacity:.38}#cookiescript_injected .mdc-switch .mdc-switch__handle,#cookiescript_injected_fsd .mdc-switch .mdc-switch__handle{border-radius:10px}#cookiescript_injected .mdc-switch .mdc-switch__handle,#cookiescript_injected_fsd .mdc-switch .mdc-switch__handle{width:20px}#cookiescript_injected .mdc-switch .mdc-switch__handle-track,#cookiescript_injected_fsd .mdc-switch .mdc-switch__handle-track{width:calc(100% - 20px)}#cookiescript_injected .mdc-switch.mdc-switch--selected:enabled .mdc-switch__icon,#cookiescript_injected_fsd .mdc-switch.mdc-switch--selected:enabled .mdc-switch__icon{fill:#fff}#cookiescript_injected .mdc-switch.mdc-switch--selected:disabled .mdc-switch__icon,#cookiescript_injected_fsd .mdc-switch.mdc-switch--selected:disabled .mdc-switch__icon{fill:#fff}#cookiescript_injected .mdc-switch.mdc-switch--unselected:enabled .mdc-switch__icon,#cookiescript_injected_fsd .mdc-switch.mdc-switch--unselected:enabled .mdc-switch__icon{fill:#fff}#cookiescript_injected .mdc-switch.mdc-switch--unselected:disabled .mdc-switch__icon,#cookiescript_injected_fsd .mdc-switch.mdc-switch--unselected:disabled .mdc-switch__icon{fill:#fff}#cookiescript_injected .mdc-switch.mdc-switch--selected:disabled .mdc-switch__icons,#cookiescript_injected_fsd .mdc-switch.mdc-switch--selected:disabled .mdc-switch__icons{opacity:.38}#cookiescript_injected .mdc-switch.mdc-switch--unselected:disabled .mdc-switch__icons,#cookiescript_injected_fsd .mdc-switch.mdc-switch--unselected:disabled .mdc-switch__icons{opacity:.38}#cookiescript_injected .mdc-switch.mdc-switch--selected .mdc-switch__icon,#cookiescript_injected_fsd .mdc-switch.mdc-switch--selected .mdc-switch__icon{width:18px;height:18px}#cookiescript_injected .mdc-switch.mdc-switch--unselected .mdc-switch__icon,#cookiescript_injected_fsd .mdc-switch.mdc-switch--unselected .mdc-switch__icon{width:18px;height:18px}#cookiescript_injected .mdc-switch.mdc-switch--selected:enabled:hover:not(:focus) .mdc-switch__ripple::after,#cookiescript_injected .mdc-switch.mdc-switch--selected:enabled:hover:not(:focus) .mdc-switch__ripple::before{background-color:}#cookiescript_injected .mdc-switch.mdc-switch--selected:enabled:focus .mdc-switch__ripple::after,#cookiescript_injected .mdc-switch.mdc-switch--selected:enabled:focus .mdc-switch__ripple::before{background-color:}#cookiescript_injected .mdc-switch.mdc-switch--selected:enabled:active .mdc-switch__ripple::after,#cookiescript_injected .mdc-switch.mdc-switch--selected:enabled:active .mdc-switch__ripple::before{background-color:}#cookiescript_injected .mdc-switch.mdc-switch--unselected:enabled:hover:not(:focus) .mdc-switch__ripple::after,#cookiescript_injected .mdc-switch.mdc-switch--unselected:enabled:hover:not(:focus) .mdc-switch__ripple::before,#cookiescript_injected_fsd .mdc-switch.mdc-switch--unselected:enabled:hover:not(:focus) .mdc-switch__ripple::after,#cookiescript_injected_fsd .mdc-switch.mdc-switch--unselected:enabled:hover:not(:focus) .mdc-switch__ripple::before{background-color:#424242}#cookiescript_injected .mdc-switch.mdc-switch--unselected:enabled:focus .mdc-switch__ripple::after,#cookiescript_injected .mdc-switch.mdc-switch--unselected:enabled:focus .mdc-switch__ripple::before,#cookiescript_injected_fsd .mdc-switch.mdc-switch--unselected:enabled:focus .mdc-switch__ripple::after,#cookiescript_injected_fsd .mdc-switch.mdc-switch--unselected:enabled:focus .mdc-switch__ripple::before{background-color:#424242}#cookiescript_injected .mdc-switch.mdc-switch--unselected:enabled:active .mdc-switch__ripple::after,#cookiescript_injected .mdc-switch.mdc-switch--unselected:enabled:active .mdc-switch__ripple::before,#cookiescript_injected_fsd .mdc-switch.mdc-switch--unselected:enabled:active .mdc-switch__ripple::after,#cookiescript_injected_fsd .mdc-switch.mdc-switch--unselected:enabled:active .mdc-switch__ripple::before{background-color:#424242}#cookiescript_injected .mdc-switch.mdc-switch--selected:enabled:hover:not(:focus).mdc-ripple-surface--hover .mdc-switch__ripple::before,#cookiescript_injected .mdc-switch.mdc-switch--selected:enabled:hover:not(:focus):hover .mdc-switch__ripple::before,#cookiescript_injected_fsd .mdc-switch.mdc-switch--selected:enabled:hover:not(:focus).mdc-ripple-surface--hover .mdc-switch__ripple::before,#cookiescript_injected_fsd .mdc-switch.mdc-switch--selected:enabled:hover:not(:focus):hover .mdc-switch__ripple::before{opacity:.04}#cookiescript_injected .mdc-switch.mdc-switch--selected:enabled:focus.mdc-ripple-upgraded--background-focused .mdc-switch__ripple::before,#cookiescript_injected .mdc-switch.mdc-switch--selected:enabled:focus:not(.mdc-ripple-upgraded):focus .mdc-switch__ripple::before,#cookiescript_injected_fsd .mdc-switch.mdc-switch--selected:enabled:focus.mdc-ripple-upgraded--background-focused .mdc-switch__ripple::before,#cookiescript_injected_fsd .mdc-switch.mdc-switch--selected:enabled:focus:not(.mdc-ripple-upgraded):focus .mdc-switch__ripple::before{transition-duration:75ms;opacity:.12}#cookiescript_injected .mdc-switch.mdc-switch--selected:enabled:active:not(.mdc-ripple-upgraded) .mdc-switch__ripple::after,#cookiescript_injected_fsd .mdc-switch.mdc-switch--selected:enabled:active:not(.mdc-ripple-upgraded) .mdc-switch__ripple::after{transition:opacity 150ms linear}#cookiescript_injected .mdc-switch.mdc-switch--selected:enabled:active:not(.mdc-ripple-upgraded):active .mdc-switch__ripple::after,#cookiescript_injected_fsd .mdc-switch.mdc-switch--selected:enabled:active:not(.mdc-ripple-upgraded):active .mdc-switch__ripple::after{transition-duration:75ms;opacity:.1}#cookiescript_injected .mdc-switch.mdc-switch--unselected:enabled:hover:not(:focus).mdc-ripple-surface--hover .mdc-switch__ripple::before,#cookiescript_injected .mdc-switch.mdc-switch--unselected:enabled:hover:not(:focus):hover .mdc-switch__ripple::before,#cookiescript_injected_fsd .mdc-switch.mdc-switch--unselected:enabled:hover:not(:focus).mdc-ripple-surface--hover .mdc-switch__ripple::before,#cookiescript_injected_fsd .mdc-switch.mdc-switch--unselected:enabled:hover:not(:focus):hover .mdc-switch__ripple::before{opacity:.04}#cookiescript_injected .mdc-switch.mdc-switch--unselected:enabled:focus.mdc-ripple-upgraded--background-focused .mdc-switch__ripple::before,#cookiescript_injected .mdc-switch.mdc-switch--unselected:enabled:focus:not(.mdc-ripple-upgraded):focus .mdc-switch__ripple::before,#cookiescript_injected_fsd .mdc-switch.mdc-switch--unselected:enabled:focus.mdc-ripple-upgraded--background-focused .mdc-switch__ripple::before,#cookiescript_injected_fsd .mdc-switch.mdc-switch--unselected:enabled:focus:not(.mdc-ripple-upgraded):focus .mdc-switch__ripple::before{transition-duration:75ms;opacity:.12}#cookiescript_injected .mdc-switch.mdc-switch--unselected:enabled:active:not(.mdc-ripple-upgraded) .mdc-switch__ripple::after,#cookiescript_injected_fsd .mdc-switch.mdc-switch--unselected:enabled:active:not(.mdc-ripple-upgraded) .mdc-switch__ripple::after{transition:opacity 150ms linear}#cookiescript_injected .mdc-switch.mdc-switch--unselected:enabled:active:not(.mdc-ripple-upgraded):active .mdc-switch__ripple::after,#cookiescript_injected_fsd .mdc-switch.mdc-switch--unselected:enabled:active:not(.mdc-ripple-upgraded):active .mdc-switch__ripple::after{transition-duration:75ms;opacity:.1}#cookiescript_injected .mdc-switch .mdc-switch__ripple,#cookiescript_injected_fsd .mdc-switch .mdc-switch__ripple{height:48px;width:48px}#cookiescript_injected .mdc-switch .mdc-switch__track,#cookiescript_injected_fsd .mdc-switch .mdc-switch__track{height:14px}#cookiescript_injected .mdc-switch:disabled .mdc-switch__track,#cookiescript_injected_fsd .mdc-switch:disabled .mdc-switch__track{opacity:.12}#cookiescript_injected .mdc-switch:enabled .mdc-switch__track::after{background:;opacity:0.3}#cookiescript_injected .mdc-switch:enabled:hover:not(:focus):not(:active) .mdc-switch__track::after{background:;opacity:0.3}#cookiescript_injected .mdc-switch:enabled:focus:not(:active) .mdc-switch__track::after{background:;opacity:0.3}#cookiescript_injected .mdc-switch:enabled:active .mdc-switch__track::after{background:;opacity:0.3}#cookiescript_injected .mdc-switch:disabled .mdc-switch__track::after,#cookiescript_injected_fsd .mdc-switch:disabled .mdc-switch__track::after{background:#424242}#cookiescript_injected .mdc-switch:enabled .mdc-switch__track::before,#cookiescript_injected_fsd .mdc-switch:enabled .mdc-switch__track::before{background:#e0e0e0}#cookiescript_injected .mdc-switch:enabled:hover:not(:focus):not(:active) .mdc-switch__track::before,#cookiescript_injected_fsd .mdc-switch:enabled:hover:not(:focus):not(:active) .mdc-switch__track::before{background:#e0e0e0}#cookiescript_injected .mdc-switch:enabled:focus:not(:active) .mdc-switch__track::before,#cookiescript_injected_fsd .mdc-switch:enabled:focus:not(:active) .mdc-switch__track::before{background:#e0e0e0}#cookiescript_injected .mdc-switch:enabled:active .mdc-switch__track::before,#cookiescript_injected_fsd .mdc-switch:enabled:active .mdc-switch__track::before{background:#e0e0e0}#cookiescript_injected .mdc-switch:disabled .mdc-switch__track::before,#cookiescript_injected_fsd .mdc-switch:disabled .mdc-switch__track::before{background:#424242}#cookiescript_injected .mdc-switch .mdc-switch__track,#cookiescript_injected_fsd .mdc-switch .mdc-switch__track{border-radius:7px}@media screen and (forced-colors:active),(-ms-high-contrast:active){#cookiescript_injected .mdc-switch:disabled .mdc-switch__handle::after,#cookiescript_injected_fsd .mdc-switch:disabled .mdc-switch__handle::after{opacity:1}#cookiescript_injected .mdc-switch.mdc-switch--selected:disabled .mdc-switch__icons,#cookiescript_injected_fsd .mdc-switch.mdc-switch--selected:disabled .mdc-switch__icons{opacity:1}#cookiescript_injected .mdc-switch.mdc-switch--unselected:disabled .mdc-switch__icons,#cookiescript_injected_fsd .mdc-switch.mdc-switch--unselected:disabled .mdc-switch__icons{opacity:1}#cookiescript_injected .mdc-switch:disabled .mdc-switch__track,#cookiescript_injected_fsd .mdc-switch:disabled .mdc-switch__track{opacity:1}}
+/*End Toggle*/
+
+#cookiescript_injected {
+    background-color: rgba(17, 17, 17, 0.5) !important;
+    position: fixed;
+    padding: 0;
+    width: 100%;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999996;
+}
+#cookiescript_wrapper {
+    width: 60%;
+    margin: 0 auto;
+    line-height: 18px;
+    letter-spacing: normal;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 15px 20px 15px 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #191d24;
+    z-index: 999997;
+    opacity: 1;
+    font-size: 14px;
+    font-weight: normal;
+    font-family: 'Open Sans', Arial, 'Trebuchet MS', 'Segoe UI', 'Helvetica', sans-serif;
+    box-shadow: 1px 2px 8px 0 rgba(0, 0, 0, 0.35);
+    color: #ffffff;
+    align-items: center;
+	max-height: 80%;
+    overflow-y: auto;
+    outline: none;
+	max-width: 900px;
+}
+#cookiescript_copyright {
+    text-align: center;
+    line-height: 1;
+}
+#cookiescript_buttons {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 0 5px 0;
+}
+#cookiescript_manage_wrap {
+    margin: 0 0 10px 0;
+}
+#cookiescript_header {
+    padding: 0;
+    margin: 5px auto 15px;
+    text-align: center;
+}
+#cookiescript_checkboxs {
+    margin: 0 auto 15px auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.cookiescript_checkbox {
+    margin: 0;
+}
+.cookiescript_checkbox_text {
+    margin: 0 20px 0 5px;
+}
+#cookiescript_accept, #cookiescript_reject, #cookiescript_save {
+    margin: 5px 7px;
+    flex-shrink: 1;
+    padding: 0 17px;
+}
+#cookiescript_description {
+    margin: 0 auto 15px;
+    text-align: center;
+    max-width: 600px;
+}
+
+.cookiescript_checkbox_label{
+    padding: 0;
+    margin: 0 10px 0 -2px;
+}
+#cookiescript_cookietablewrap {
+    transition: height 300ms 0ms, min-height 300ms 0ms, max-height 300ms 0ms, opacity 200ms 300ms;
+}
+#cookiescript_cookietablewrap.cookiescript_hidden {
+    transition: height 300ms 0ms, min-height 300ms 0ms, max-height 300ms 0ms, opacity 200ms 0ms;
+}
+
+#cookiescript_tabscontent{
+    position: relative;
+    top: -1px;
+}
+
+@media only screen and (max-width: 414px) {
+    #cookiescript_wrapper{
+        padding:15px;
+        width: 80%;
+    }
+    #cookiescript_close{
+        top:10px;
+        right: 10px;
+    }
+    #cookiescript_header{
+        margin-top:10px;
+    }
+    #cookiescript_description,
+    #cookiescript_buttons{
+        margin-bottom:10px;
+    }
+
+    #cookiescript_checkboxs{
+        flex-direction: column;
+    }
+    #cookiescript_buttons{
+        flex-wrap: wrap;
+    }
+    #cookiescript_checkboxs{
+        margin: 0 auto 15px 0;
+    }
+    .cookiescript_checkbox {
+        margin: 0 0 -10px 0;
+    }
+    #cookiescript_accept, #cookiescript_reject, #cookiescript_save {
+		width:100%;
+	}
+	#cookiescript_wrapper {
+		max-height: 100%;
+	}
+}
+#cookiescript_accept, #cookiescript_reject, #cookiescript_save {
+	border-radius: 8px;
+}
+
+#cookiescript_wrapper {
+	border-radius: 8px;
+}
+/*IE 9 fixes*/
+@media screen and (min-width:0\0) and (min-resolution: .001dpcm) {
+	.cookiescript_checkbox{
+		display: inline-block;
+	}
+}
+
+
+    </style>
+    
+  <div id="cookiescript_badge" tabindex="0" role="alert" aria-live="assertive" style="">
+          <div id="cookiescript_badgeimage">
+        <svg id="cookiescript_badgesvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320.28 320.28">
+          <defs>
+            <style>
+              .cookiescriptlogo {fill: #ffffff;}
+            </style>
+          </defs>
+          <g id="cs_layer_2" data-name="cs_layer_2">
+            <g id="cs_layer_1" data-name="cs_layer_1">
+              <path class="cookiescriptlogo" d="M160.14,0A160.14,160.14,0,1,0,320.28,160.14,160.14,160.14,0,0,0,160.14,0Zm0,301.49A141.35,141.35,0,1,1,301.49,160.14,141.35,141.35,0,0,1,160.14,301.49Z"></path>
+              <circle class="cookiescriptlogo" cx="98.09" cy="106.52" r="35.11"></circle>
+              <circle class="cookiescriptlogo" cx="88.27" cy="200.63" r="14.09"></circle>
+              <circle class="cookiescriptlogo" cx="151.17" cy="251.06" r="22.63"></circle>
+              <circle class="cookiescriptlogo" cx="238.42" cy="180.9" r="30.49"></circle>
+              <circle class="cookiescriptlogo" cx="206.65" cy="86.27" r="18.53"></circle>
+            </g>
+          </g>
+        </svg>
+      </div>
+              <div id="cookiescript_badgetext" data-cs-i18n-text="{&quot;en&quot;:&quot;Cookie settings&quot;}">
+        Cookie settings      </div>
+      </div>
+</body>
