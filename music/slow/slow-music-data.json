@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Calm Ocean",
+    "file": "/music/slow/calm-ocean.mp3",
+    "thumbnail": "/music/slow/calm-ocean.jpg"
+  },
+  {
+    "name": "Dream Tunnel",
+    "file": "/music/slow/dream-tunnel.mp3",
+    "thumbnail": "/music/slow/dream-tunnel.jpg"
+  },
+  {
+    "name": "Neon Breeze",
+    "file": "/music/slow/neon-breeze.mp3",
+    "thumbnail": "/music/slow/neon-breeze.jpg"
+  }
+]
